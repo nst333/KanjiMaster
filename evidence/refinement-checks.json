@@ -1,0 +1,66 @@
+{
+  "recordedAt": "2026-10-16T13:05:21.363Z",
+  "before": {
+    "comparisonTop": 875.265625,
+    "inputHeight": 531.078125,
+    "viewportWidth": 1280
+  },
+  "after": {
+    "clientWidth": 1265,
+    "comparisonTop": 487.5,
+    "inputHeight": 362.5,
+    "scrollWidth": 1265,
+    "viewportWidth": 1280
+  },
+  "viewports": [
+    {
+      "width": 1440,
+      "layout": {
+        "client": 1425,
+        "comparisonDocumentTop": 487.5,
+        "scroll": 1425
+      },
+      "mascot": true
+    },
+    {
+      "width": 1024,
+      "layout": {
+        "client": 1009,
+        "comparisonDocumentTop": 487.5,
+        "scroll": 1009
+      },
+      "mascot": true
+    },
+    {
+      "width": 768,
+      "layout": {
+        "client": 753,
+        "comparisonDocumentTop": 491.5,
+        "scroll": 753
+      },
+      "mascot": true
+    },
+    {
+      "width": 390,
+      "layout": {
+        "client": 375,
+        "comparisonDocumentTop": 757.640625,
+        "scroll": 375
+      },
+      "mascot": true
+    }
+  ],
+  "interactionChecks": {
+    "automaticRecognition": "mouse-drawn 三",
+    "showMoreVisibleCandidates": 20,
+    "selectedCharacter": "三",
+    "selectedCandidateAriaPressed": true,
+    "originalPages": "三 verified in both real frames",
+    "manualSearch": "語 verified in responsive harness",
+    "keyboardSplitAfterRight": "55",
+    "foldedComparisonDocumentTop": 168,
+    "mobileNaverTabSelected": true
+  },
+  "tests": "10 passed",
+  "limits": "Local Chromium with CSS iframe viewports; no real mobile-device certification or AI appearance detector score."
+}

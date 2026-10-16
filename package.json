@@ -1,0 +1,13 @@
+{
+  "name": "kanji-research-feasibility",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "vendor": "node scripts/fetch-vendor.mjs",
+    "probe:headers": "node scripts/probe-headers.mjs",
+    "benchmark": "node scripts/benchmark.mjs"
+  },
+  "engines": { "node": ">=22" }
+}

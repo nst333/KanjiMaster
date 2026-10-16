@@ -1,0 +1,33 @@
+{
+  "recordedAt": "2026-10-16T12:33:04.914Z",
+  "browser": "Codex in-app Chromium",
+  "origin": "http://127.0.0.1:4174",
+  "observations": [
+    {
+      "character": "日",
+      "nihongoTitle": "1.「日」",
+      "naverEntry": "#/entry/jako/f6b4cf8e5d134946b95126346e4d5bac"
+    },
+    {
+      "character": "人",
+      "nihongoTitle": "5.「人」",
+      "naverEntry": "#/entry/jako/a94f980b394c416fb647ffa3321a96e3"
+    },
+    {
+      "character": "学",
+      "nihongoTitle": "36.「学」",
+      "naverEntry": "#/entry/jako/d5dbf865fff347c18dfd62f8a1965939"
+    },
+    {
+      "character": "語",
+      "nihongoTitle": "72.「語」",
+      "naverEntry": "#/entry/jako/2e2d1ae45af541d8a379f1e337054d7e"
+    },
+    {
+      "character": "鬱",
+      "nihongoTitle": "2124.「鬱」",
+      "naverEntry": "#/entry/jako/f76f8ee36a12471cb3328551ab4283bf"
+    }
+  ],
+  "note": "Both real cross-origin frames displayed all five expected entries without login. Checked using browser automation privileges, not application DOM access."
+}

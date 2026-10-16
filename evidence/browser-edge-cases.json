@@ -1,0 +1,45 @@
+{
+  "recordedAt": "2026-10-16T12:35:12.595Z",
+  "observations": [
+    {
+      "character": "學",
+      "evidence": [
+        "  - heading \"KanjiMaster 기술 검증용 · 디자인 미승인\" [level=1]",
+        "    - heading \"일본어 한자 공부방\" [level=2]",
+        "        - heading \"찾지 못함\" [level=1]",
+        "        - heading \"JLPT 한자 분포\" [level=2]",
+        "    - heading \"NAVER 일본어사전\" [level=2]",
+        "      - heading \"사전\" [level=1]:",
+        "      - heading \"jakodic.dict.header\" [level=1]:",
+        "      - heading \"단어 29\" [level=3]:",
+        "      - heading \"뜻풀이 24\" [level=3]:",
+        "      - heading \"예문 1\" [level=3]:",
+        "      - heading \"개인화 플러그인 영역\" [level=3]",
+        "      - heading \"공지사항 새로운 공시자항 등록됨\" [level=3]:",
+        "        - heading \"[광고]청년에게 건넨 당신의 한마디가 한 권의 안부책이 됩니다 안부묻기 새 창\" [level=5]:",
+        "      - heading \"내가 찾은 단어\" [level=3]",
+        "      - heading \"JLPT 등급별 단어 보기\" [level=3]",
+        "      - heading \"사전 사용팁\" [level=3]"
+      ]
+    },
+    {
+      "character": "𠮷",
+      "evidence": [
+        "  - heading \"KanjiMaster 기술 검증용 · 디자인 미승인\" [level=1]",
+        "    - heading \"일본어 한자 공부방\" [level=2]",
+        "        - heading \"찾지 못함\" [level=1]",
+        "        - heading \"JLPT 한자 분포\" [level=2]",
+        "    - heading \"NAVER 일본어사전\" [level=2]",
+        "      - heading \"사전\" [level=1]:",
+        "      - heading \"jakodic.dict.header\" [level=1]:",
+        "        - text: \"\\\"𠮷\\\" 에 대한 검색 결과가 없습니다.\"",
+        "      - heading \"번역 결과\" [level=3]",
+        "      - heading \"공지사항 새로운 공시자항 등록됨\" [level=3]:",
+        "        - heading \"[광고]소화를 빠르게 베나치오 프로 새 창\" [level=5]:",
+        "      - heading \"내가 찾은 단어\" [level=3]",
+        "      - heading \"JLPT 등급별 단어 보기\" [level=3]",
+        "      - heading \"사전 사용팁\" [level=3]"
+      ]
+    }
+  ]
+}

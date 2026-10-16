@@ -1,0 +1,45 @@
+{
+  "recordedAt": "2026-10-16T12:50:30.006Z",
+  "viewports": [
+    {
+      "width": 1440,
+      "layout": {
+        "client": 1425,
+        "scroll": 1425,
+        "viewport": 1440
+      },
+      "mascotLoaded": true
+    },
+    {
+      "width": 1024,
+      "layout": {
+        "client": 1009,
+        "scroll": 1009,
+        "viewport": 1024
+      },
+      "mascotLoaded": true
+    },
+    {
+      "width": 768,
+      "layout": {
+        "client": 753,
+        "scroll": 753,
+        "viewport": 768
+      },
+      "mascotLoaded": true
+    },
+    {
+      "width": 390,
+      "layout": {
+        "client": 375,
+        "scroll": 375,
+        "viewport": 390
+      },
+      "mascotLoaded": true
+    }
+  ],
+  "recognition": "Mouse-drawn 三 returned real candidates; selection updated reference URLs.",
+  "splitAfterArrowRight": "55",
+  "mobileTab": "Enter selected NAVER",
+  "scope": "Local Chromium; CSS iframe viewports, not real mobile devices."
+}

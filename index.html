@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>KanjiMaster · 한자 찾기</title>
+    <link rel="stylesheet" href="/src/spike.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="brand">
+            <figure class="study-companion"><img src="/assets/study-blob.png" alt="민트색 책갈피를 단 연보라색 젤리 캐릭터" width="106"
+                    height="72"></figure>
+            <div>
+                <h1>한자 찾기</h1>
+                <p class="app-name">KanjiMaster</p>
+            </div>
+        </div>
+        <form id="manual-form">
+            <label for="manual">한자 직접 입력</label>
+            <input id="manual" lang="ja" autocomplete="off" spellcheck="false" placeholder="예: 語"
+                aria-describedby="manual-error">
+            <button class="primary-button" aria-label="두 사전 검색">검색</button>
+            <p id="manual-error" role="alert"></p>
+        </form>
+        <div class="selected-note"><span>선택한 한자</span><output id="selected" aria-label="선택한 한자" lang="ja">—</output>
+        </div>
+    </header>
+    <main>
+        <details open id="input-panel">
+            <summary>필기 입력<span class="summary-hint">획마다 자동 인식</span></summary>
+            <div class="input-grid">
+                <section class="drawing-section" aria-label="필기 입력">
+                    <canvas id="drawing" aria-label="한자 필기 영역" aria-describedby="canvas-hint" width="512"
+                        height="512"></canvas>
+                    <div class="controls"><button id="undo" disabled>한 획 취소</button><button id="clear"
+                            disabled>지우기</button><button id="recognize" disabled>재인식</button></div>
+                    <div class="drawing-caption">
+                        <p id="canvas-hint">한자를 한 글자씩 써 주세요.</p>
+                        <p id="stroke-count">0획</p>
+                    </div>
+                </section>
+                <section class="candidate-section" aria-label="인식 후보">
+                    <h2>인식 후보</h2>
+                    <p id="recognition-status" role="status">인식 준비 중…</p>
+                    <div id="candidates" aria-label="인식 후보"></div>
+                    <div id="candidate-actions" class="candidate-actions" hidden>
+                        <button id="more-candidates" type="button" aria-controls="candidates" hidden>후보 더보기</button>
+                        <span id="candidate-count" class="candidate-count" aria-live="polite" aria-atomic="true"></span>
+                    </div>
+                </section>
+            </div>
+        </details>
+        <div class="reading-toolbar">
+            <p class="notice">원문이 보이지 않으면 ‘원문 열기’를 이용하세요.</p><button id="reset-split">너비 50:50 복원</button>
+        </div>
+        <div class="mobile-tabs" role="tablist" aria-label="사전 선택"><button role="tab" id="tab-nihongo"
+                aria-controls="pane-nihongo" aria-selected="true">일본어 한자 공부방</button><button role="tab" id="tab-naver"
+                aria-controls="pane-naver" aria-selected="false" tabindex="-1">NAVER</button></div>
+        <div id="comparison">
+            <section id="pane-nihongo" class="pane" aria-labelledby="title-nihongo">
+                <div class="pane-header">
+                    <h2 id="title-nihongo">일본어 한자 공부방</h2><a id="open-nihongo" target="_blank" rel="noopener noreferrer"
+                        hidden>원문
+                        열기 ↗</a><button id="reload-nihongo" disabled>새로고침</button>
+                </div>
+                <p id="status-nihongo" role="status">한자를 선택해 주세요.</p>
+                <div id="frame-nihongo" class="frame-slot"></div>
+            </section>
+            <div id="divider" role="separator" aria-label="사전 패널 너비" aria-orientation="vertical" aria-valuemin="25"
+                aria-valuemax="75" aria-valuenow="50" tabindex="0"></div>
+            <section id="pane-naver" class="pane mobile-hidden" aria-labelledby="title-naver">
+                <div class="pane-header">
+                    <h2 id="title-naver">NAVER 일본어사전</h2><a id="open-naver" target="_blank" rel="noopener noreferrer"
+                        hidden>원문 열기
+                        ↗</a><button id="reload-naver" disabled>새로고침</button>
+                </div>
+                <p id="status-naver" role="status">한자를 선택해 주세요.</p>
+                <div id="frame-naver" class="frame-slot"></div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="credits">필기 인식 <a href="https://github.com/asdfjkl/kanjicanvas">Kanji Canvas</a> · <a
+                href="/vendor/kanjicanvas/LICENSE.TXT">라이선스</a><span>글꼴 <a
+                    href="/assets/fonts/LICENSE.html">나눔스퀘어라운드</a></span>
+        </div>
+        <details class="sample-tools">
+            <summary>필기 샘플 수집</summary>
+            <p>테스트용 획과 정답을 브라우저 메모리에 모읍니다. 새로고침 전에 JSON으로 저장하세요.</p><label for="sample-label">샘플 정답 한자</label><input
+                id="sample-label" lang="ja"><button id="save-sample">현재 필기 수집</button><button id="export-samples">샘플
+                JSON
+                저장</button>
+            <p id="sample-status" role="status">수집된 샘플 0개</p>
+        </details>
+    </footer>
+    <script type="module" src="/src/spike.mjs"></script>
+</body>
+
+</html>,,

@@ -1,0 +1,47 @@
+{
+  "method": "Same-origin harness with real iframe CSS viewport; browser viewport API did not affect target tab. Not real-device emulation.",
+  "results": [
+    {
+      "requestedWidth": 1440,
+      "layout": {
+        "clientWidth": 1425,
+        "scrollWidth": 1425,
+        "viewportWidth": 1440
+      },
+      "mobileTabsVisible": false
+    },
+    {
+      "requestedWidth": 1024,
+      "layout": {
+        "clientWidth": 1009,
+        "scrollWidth": 1009,
+        "viewportWidth": 1024
+      },
+      "mobileTabsVisible": false
+    },
+    {
+      "requestedWidth": 768,
+      "layout": {
+        "clientWidth": 753,
+        "scrollWidth": 753,
+        "viewportWidth": 768
+      },
+      "mobileTabsVisible": false
+    },
+    {
+      "requestedWidth": 390,
+      "layout": {
+        "clientWidth": 375,
+        "scrollWidth": 375,
+        "viewportWidth": 390
+      },
+      "mobileTabsVisible": true
+    }
+  ],
+  "mobileTabCheck": {
+    "mobileNaverSelected": "true",
+    "leftPaneVisible": false,
+    "rightPaneVisible": true,
+    "keyboardLeftSelected": "true"
+  }
+}

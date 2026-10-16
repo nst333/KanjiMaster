@@ -1,0 +1,107 @@
+{
+  "recordedAt": "2026-10-16T13:18:58.175Z",
+  "before": {
+    "rendered": 40,
+    "scrollTop": 0,
+    "lastCandidateVisible": false
+  },
+  "desktop": [
+    {
+      "buttonTop": 388,
+      "count": "10개 표시 · 전체 53개",
+      "label": "후보 10개 더 보기",
+      "shown": 10
+    },
+    {
+      "buttonTop": 388,
+      "count": "20개 표시 · 전체 53개",
+      "label": "후보 10개 더 보기",
+      "lastVisible": true,
+      "moreHidden": false,
+      "scrollTop": 0,
+      "shown": 20
+    },
+    {
+      "buttonTop": 388,
+      "count": "30개 표시 · 전체 53개",
+      "label": "후보 10개 더 보기",
+      "lastVisible": true,
+      "moreHidden": false,
+      "scrollTop": 14,
+      "shown": 30
+    },
+    {
+      "buttonTop": 388,
+      "count": "40개 표시 · 전체 53개",
+      "label": "후보 10개 더 보기",
+      "lastVisible": true,
+      "moreHidden": false,
+      "scrollTop": 14,
+      "shown": 40
+    },
+    {
+      "buttonTop": 388,
+      "count": "50개 표시 · 전체 53개",
+      "label": "후보 3개 더 보기",
+      "lastVisible": true,
+      "moreHidden": false,
+      "scrollTop": 78,
+      "shown": 50
+    },
+    {
+      "buttonTop": null,
+      "count": "53개 표시 · 전체 53개",
+      "label": "후보 더보기",
+      "lastVisible": true,
+      "moreHidden": true,
+      "scrollTop": 78,
+      "shown": 53
+    }
+  ],
+  "mobile": [
+    {
+      "actionsHeight": 44,
+      "buttonDocumentTop": 752.5,
+      "label": "후보 10개 더 보기",
+      "lastVisible": true,
+      "rendered": 20,
+      "scrollTop": 66
+    },
+    {
+      "actionsHeight": 44,
+      "buttonDocumentTop": 752.5,
+      "label": "후보 10개 더 보기",
+      "lastVisible": true,
+      "rendered": 30,
+      "scrollTop": 124
+    },
+    {
+      "actionsHeight": 44,
+      "buttonDocumentTop": 752.5,
+      "label": "후보 10개 더 보기",
+      "lastVisible": true,
+      "rendered": 40,
+      "scrollTop": 240
+    },
+    {
+      "actionsHeight": 44,
+      "buttonDocumentTop": 752.5,
+      "label": "후보 3개 더 보기",
+      "lastVisible": true,
+      "rendered": 50,
+      "scrollTop": 356
+    }
+  ],
+  "mobileFinal": {
+    "focusInCandidates": true,
+    "moreHidden": true,
+    "shown": 53
+  },
+  "contrast": {
+    "buttonText": 9.11,
+    "helpText": 4.61,
+    "paneHeading": 7.3
+  },
+  "tests": "10 passed; JavaScript syntax check passed.",
+  "scope": "Local Chromium; 390px CSS iframe viewport, not real touch device. Native nested-frame coordinate mismatch was resolved using observed screenshot coordinates."
+}

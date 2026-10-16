@@ -1,0 +1,15 @@
+{
+  "beforeScroll": {
+    "left": 0,
+    "right": 0
+  },
+  "afterKeyScroll": {
+    "left": 1304,
+    "right": 0
+  },
+  "afterWheelScroll": {
+    "left": 1304,
+    "right": 0
+  },
+  "note": "Keyboard action reported tooling timeout but left frame scrolled while right stayed unchanged. Pointer wheel result measured after event settling. Application does not inspect cross-origin DOM."
+}

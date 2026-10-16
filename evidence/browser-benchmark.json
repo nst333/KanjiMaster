@@ -1,0 +1,1152 @@
+{
+  "methodology": "Agent-authored geometric fixtures; NOT human handwriting accuracy evidence.",
+  "recordedAt": "2026-10-16T12:32:32.310Z",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+  "devicePixelRatio": 1,
+  "hardwareConcurrency": 12,
+  "sampleCount": 60,
+  "topFiveRate": 1,
+  "p95RoundTripMs": 28.100000008940697,
+  "results": [
+    {
+      "character": "日",
+      "variant": 0,
+      "candidates": [
+        "曰",
+        "日",
+        "田",
+        "尺",
+        "同",
+        "目",
+        "句",
+        "白",
+        "司",
+        "石"
+      ],
+      "topFive": true,
+      "engineMs": 4.799999997019768,
+      "roundTripMs": 5
+    },
+    {
+      "character": "日",
+      "variant": 1,
+      "candidates": [
+        "曰",
+        "日",
+        "田",
+        "尺",
+        "同",
+        "句",
+        "目",
+        "司",
+        "石",
+        "由"
+      ],
+      "topFive": true,
+      "engineMs": 4.0999999940395355,
+      "roundTripMs": 4.199999988079071
+    },
+    {
+      "character": "日",
+      "variant": 2,
+      "candidates": [
+        "曰",
+        "日",
+        "田",
+        "目",
+        "尺",
+        "同",
+        "句",
+        "司",
+        "石",
+        "由"
+      ],
+      "topFive": true,
+      "engineMs": 3.5,
+      "roundTripMs": 3.7000000029802322
+    },
+    {
+      "character": "目",
+      "variant": 0,
+      "candidates": [
+        "目",
+        "巨",
+        "自",
+        "回",
+        "団",
+        "民",
+        "図",
+        "臣",
+        "円",
+        "臨"
+      ],
+      "topFive": true,
+      "engineMs": 4,
+      "roundTripMs": 10.799999997019768
+    },
+    {
+      "character": "目",
+      "variant": 1,
+      "candidates": [
+        "目",
+        "巨",
+        "自",
+        "団",
+        "民",
+        "回",
+        "図",
+        "臣",
+        "円",
+        "臨"
+      ],
+      "topFive": true,
+      "engineMs": 3.5999999940395355,
+      "roundTripMs": 3.7999999970197678
+    },
+    {
+      "character": "目",
+      "variant": 2,
+      "candidates": [
+        "目",
+        "巨",
+        "自",
+        "団",
+        "民",
+        "図",
+        "臨",
+        "回",
+        "臣",
+        "円"
+      ],
+      "topFive": true,
+      "engineMs": 5.399999991059303,
+      "roundTripMs": 5.5
+    },
+    {
+      "character": "田",
+      "variant": 0,
+      "candidates": [
+        "田",
+        "用",
+        "団",
+        "囚",
+        "円",
+        "史",
+        "甲",
+        "申",
+        "回",
+        "白"
+      ],
+      "topFive": true,
+      "engineMs": 3.9000000059604645,
+      "roundTripMs": 14.5
+    },
+    {
+      "character": "田",
+      "variant": 1,
+      "candidates": [
+        "田",
+        "用",
+        "団",
+        "囚",
+        "円",
+        "史",
+        "甲",
+        "回",
+        "申",
+        "白"
+      ],
+      "topFive": true,
+      "engineMs": 4.300000011920929,
+      "roundTripMs": 4.5
+    },
+    {
+      "character": "田",
+      "variant": 2,
+      "candidates": [
+        "田",
+        "用",
+        "史",
+        "団",
+        "囚",
+        "円",
+        "回",
+        "申",
+        "目",
+        "因"
+      ],
+      "topFive": true,
+      "engineMs": 3.5,
+      "roundTripMs": 3.6000000089406967
+    },
+    {
+      "character": "由",
+      "variant": 0,
+      "candidates": [
+        "由",
+        "田",
+        "史",
+        "白",
+        "申",
+        "曲",
+        "虫",
+        "自",
+        "中",
+        "臨"
+      ],
+      "topFive": true,
+      "engineMs": 5.4000000059604645,
+      "roundTripMs": 5.700000002980232
+    },
+    {
+      "character": "由",
+      "variant": 1,
+      "candidates": [
+        "由",
+        "史",
+        "田",
+        "白",
+        "申",
+        "曲",
+        "虫",
+        "自",
+        "中",
+        "臨"
+      ],
+      "topFive": true,
+      "engineMs": 3.6000000089406967,
+      "roundTripMs": 3.7000000029802322
+    },
+    {
+      "character": "由",
+      "variant": 2,
+      "candidates": [
+        "由",
+        "田",
+        "白",
+        "申",
+        "史",
+        "曲",
+        "自",
+        "虫",
+        "臨",
+        "図"
+      ],
+      "topFive": true,
+      "engineMs": 3.2999999970197678,
+      "roundTripMs": 3.2999999970197678
+    },
+    {
+      "character": "申",
+      "variant": 0,
+      "candidates": [
+        "田",
+        "申",
+        "史",
+        "由",
+        "曲",
+        "白",
+        "用",
+        "四",
+        "甲",
+        "虫"
+      ],
+      "topFive": true,
+      "engineMs": 4.199999988079071,
+      "roundTripMs": 4.5
+    },
+    {
+      "character": "申",
+      "variant": 1,
+      "candidates": [
+        "田",
+        "申",
+        "史",
+        "由",
+        "曲",
+        "白",
+        "四",
+        "甲",
+        "虫",
+        "用"
+      ],
+      "topFive": true,
+      "engineMs": 3.4000000059604645,
+      "roundTripMs": 3.5
+    },
+    {
+      "character": "申",
+      "variant": 2,
+      "candidates": [
+        "田",
+        "申",
+        "史",
+        "由",
+        "曲",
+        "白",
+        "甲",
+        "用",
+        "自",
+        "虫"
+      ],
+      "topFive": true,
+      "engineMs": 3.5,
+      "roundTripMs": 3.7000000029802322
+    },
+    {
+      "character": "甲",
+      "variant": 0,
+      "candidates": [
+        "田",
+        "甲",
+        "用",
+        "申",
+        "史",
+        "団",
+        "回",
+        "由",
+        "囚",
+        "皿"
+      ],
+      "topFive": true,
+      "engineMs": 4.5,
+      "roundTripMs": 4.5999999940395355
+    },
+    {
+      "character": "甲",
+      "variant": 1,
+      "candidates": [
+        "田",
+        "用",
+        "甲",
+        "申",
+        "史",
+        "団",
+        "回",
+        "囚",
+        "由",
+        "圧"
+      ],
+      "topFive": true,
+      "engineMs": 3.1000000089406967,
+      "roundTripMs": 3.2000000029802322
+    },
+    {
+      "character": "甲",
+      "variant": 2,
+      "candidates": [
+        "田",
+        "用",
+        "史",
+        "甲",
+        "申",
+        "回",
+        "団",
+        "囚",
+        "由",
+        "円"
+      ],
+      "topFive": true,
+      "engineMs": 3.7999999970197678,
+      "roundTripMs": 4
+    },
+    {
+      "character": "白",
+      "variant": 0,
+      "candidates": [
+        "白",
+        "自",
+        "臨",
+        "曰",
+        "日",
+        "円",
+        "臼",
+        "句",
+        "田",
+        "由"
+      ],
+      "topFive": true,
+      "engineMs": 3.6000000089406967,
+      "roundTripMs": 3.7000000029802322
+    },
+    {
+      "character": "白",
+      "variant": 1,
+      "candidates": [
+        "白",
+        "自",
+        "臨",
+        "曰",
+        "臼",
+        "日",
+        "円",
+        "句",
+        "田",
+        "由"
+      ],
+      "topFive": true,
+      "engineMs": 3.300000011920929,
+      "roundTripMs": 3.7999999970197678
+    },
+    {
+      "character": "白",
+      "variant": 2,
+      "candidates": [
+        "白",
+        "自",
+        "臨",
+        "曰",
+        "臼",
+        "円",
+        "日",
+        "句",
+        "田",
+        "由"
+      ],
+      "topFive": true,
+      "engineMs": 3.4000000059604645,
+      "roundTripMs": 3.5
+    },
+    {
+      "character": "百",
+      "variant": 0,
+      "candidates": [
+        "百",
+        "巨",
+        "臨",
+        "声",
+        "目",
+        "臣",
+        "自",
+        "市",
+        "角",
+        "回"
+      ],
+      "topFive": true,
+      "engineMs": 5.299999997019768,
+      "roundTripMs": 5.4000000059604645
+    },
+    {
+      "character": "百",
+      "variant": 1,
+      "candidates": [
+        "百",
+        "巨",
+        "臨",
+        "声",
+        "目",
+        "臣",
+        "自",
+        "角",
+        "再",
+        "市"
+      ],
+      "topFive": true,
+      "engineMs": 5.5,
+      "roundTripMs": 5.899999991059303
+    },
+    {
+      "character": "百",
+      "variant": 2,
+      "candidates": [
+        "百",
+        "巨",
+        "臨",
+        "目",
+        "角",
+        "声",
+        "再",
+        "臣",
+        "自",
+        "回"
+      ],
+      "topFive": true,
+      "engineMs": 5.200000002980232,
+      "roundTripMs": 5.200000002980232
+    },
+    {
+      "character": "月",
+      "variant": 0,
+      "candidates": [
+        "尺",
+        "曰",
+        "円",
+        "日",
+        "月",
+        "口",
+        "巳",
+        "句",
+        "向",
+        "回"
+      ],
+      "topFive": true,
+      "engineMs": 2.2999999970197678,
+      "roundTripMs": 2.5
+    },
+    {
+      "character": "月",
+      "variant": 1,
+      "candidates": [
+        "尺",
+        "曰",
+        "円",
+        "月",
+        "口",
+        "日",
+        "巳",
+        "句",
+        "回",
+        "向"
+      ],
+      "topFive": true,
+      "engineMs": 1.9000000059604645,
+      "roundTripMs": 2
+    },
+    {
+      "character": "月",
+      "variant": 2,
+      "candidates": [
+        "尺",
+        "曰",
+        "円",
+        "月",
+        "日",
+        "口",
+        "巳",
+        "句",
+        "向",
+        "回"
+      ],
+      "topFive": true,
+      "engineMs": 2,
+      "roundTripMs": 2.0999999940395355
+    },
+    {
+      "character": "人",
+      "variant": 0,
+      "candidates": [
+        "人",
+        "九",
+        "八",
+        "力",
+        "片",
+        "仁",
+        "小",
+        "山",
+        "幻",
+        "勹"
+      ],
+      "topFive": true,
+      "engineMs": 0.6000000089406967,
+      "roundTripMs": 0.800000011920929
+    },
+    {
+      "character": "人",
+      "variant": 1,
+      "candidates": [
+        "人",
+        "九",
+        "八",
+        "力",
+        "片",
+        "仁",
+        "小",
+        "山",
+        "幻",
+        "勹"
+      ],
+      "topFive": true,
+      "engineMs": 0.5999999940395355,
+      "roundTripMs": 0.5999999940395355
+    },
+    {
+      "character": "人",
+      "variant": 2,
+      "candidates": [
+        "人",
+        "九",
+        "八",
+        "力",
+        "片",
+        "仁",
+        "山",
+        "小",
+        "幻",
+        "勹"
+      ],
+      "topFive": true,
+      "engineMs": 0.6000000089406967,
+      "roundTripMs": 0.7000000029802322
+    },
+    {
+      "character": "入",
+      "variant": 0,
+      "candidates": [
+        "入",
+        "刀",
+        "八",
+        "口",
+        "川",
+        "刃",
+        "勹",
+        "公",
+        "乃",
+        "丁"
+      ],
+      "topFive": true,
+      "engineMs": 0.7000000029802322,
+      "roundTripMs": 1
+    },
+    {
+      "character": "入",
+      "variant": 1,
+      "candidates": [
+        "入",
+        "刀",
+        "八",
+        "口",
+        "川",
+        "刃",
+        "勹",
+        "公",
+        "乃",
+        "亡"
+      ],
+      "topFive": true,
+      "engineMs": 1,
+      "roundTripMs": 1
+    },
+    {
+      "character": "入",
+      "variant": 2,
+      "candidates": [
+        "入",
+        "刀",
+        "刃",
+        "川",
+        "口",
+        "八",
+        "乃",
+        "勹",
+        "亡",
+        "九"
+      ],
+      "topFive": true,
+      "engineMs": 0.7999999970197678,
+      "roundTripMs": 0.7999999970197678
+    },
+    {
+      "character": "大",
+      "variant": 0,
+      "candidates": [
+        "犬",
+        "大",
+        "太",
+        "火",
+        "丈",
+        "乃",
+        "力",
+        "右",
+        "元",
+        "双"
+      ],
+      "topFive": true,
+      "engineMs": 1.5,
+      "roundTripMs": 1.6000000089406967
+    },
+    {
+      "character": "大",
+      "variant": 1,
+      "candidates": [
+        "犬",
+        "大",
+        "太",
+        "火",
+        "丈",
+        "力",
+        "乃",
+        "右",
+        "元",
+        "双"
+      ],
+      "topFive": true,
+      "engineMs": 1.2999999970197678,
+      "roundTripMs": 1.2999999970197678
+    },
+    {
+      "character": "大",
+      "variant": 2,
+      "candidates": [
+        "犬",
+        "大",
+        "太",
+        "力",
+        "火",
+        "丈",
+        "双",
+        "片",
+        "右",
+        "万"
+      ],
+      "topFive": true,
+      "engineMs": 1.2999999970197678,
+      "roundTripMs": 1.5999999940395355
+    },
+    {
+      "character": "太",
+      "variant": 0,
+      "candidates": [
+        "太",
+        "大",
+        "右",
+        "友",
+        "丈",
+        "木",
+        "万",
+        "廿",
+        "乃",
+        "向"
+      ],
+      "topFive": true,
+      "engineMs": 1.9000000059604645,
+      "roundTripMs": 2.1000000089406967
+    },
+    {
+      "character": "太",
+      "variant": 1,
+      "candidates": [
+        "太",
+        "大",
+        "友",
+        "右",
+        "丈",
+        "木",
+        "万",
+        "廿",
+        "向",
+        "乃"
+      ],
+      "topFive": true,
+      "engineMs": 2.6000000089406967,
+      "roundTripMs": 2.7999999970197678
+    },
+    {
+      "character": "太",
+      "variant": 2,
+      "candidates": [
+        "太",
+        "大",
+        "右",
+        "友",
+        "丈",
+        "万",
+        "木",
+        "白",
+        "在",
+        "廿"
+      ],
+      "topFive": true,
+      "engineMs": 2.4000000059604645,
+      "roundTripMs": 2.5
+    },
+    {
+      "character": "犬",
+      "variant": 0,
+      "candidates": [
+        "犬",
+        "大",
+        "火",
+        "天",
+        "光",
+        "片",
+        "乃",
+        "尺",
+        "夫",
+        "壮"
+      ],
+      "topFive": true,
+      "engineMs": 1.9000000059604645,
+      "roundTripMs": 1.9000000059604645
+    },
+    {
+      "character": "犬",
+      "variant": 1,
+      "candidates": [
+        "犬",
+        "大",
+        "火",
+        "天",
+        "光",
+        "片",
+        "乃",
+        "尺",
+        "夫",
+        "壮"
+      ],
+      "topFive": true,
+      "engineMs": 2.0999999940395355,
+      "roundTripMs": 2.2000000029802322
+    },
+    {
+      "character": "犬",
+      "variant": 2,
+      "candidates": [
+        "犬",
+        "大",
+        "火",
+        "天",
+        "光",
+        "片",
+        "乃",
+        "夫",
+        "尺",
+        "壮"
+      ],
+      "topFive": true,
+      "engineMs": 3.4000000059604645,
+      "roundTripMs": 3.7999999970197678
+    },
+    {
+      "character": "木",
+      "variant": 0,
+      "candidates": [
+        "木",
+        "本",
+        "末",
+        "大",
+        "奴",
+        "元",
+        "方",
+        "穴",
+        "太",
+        "中"
+      ],
+      "topFive": true,
+      "engineMs": 2.5,
+      "roundTripMs": 2.5999999940395355
+    },
+    {
+      "character": "木",
+      "variant": 1,
+      "candidates": [
+        "木",
+        "末",
+        "本",
+        "奴",
+        "大",
+        "元",
+        "太",
+        "穴",
+        "方",
+        "六"
+      ],
+      "topFive": true,
+      "engineMs": 2,
+      "roundTripMs": 2.1000000089406967
+    },
+    {
+      "character": "木",
+      "variant": 2,
+      "candidates": [
+        "木",
+        "本",
+        "末",
+        "大",
+        "奴",
+        "太",
+        "元",
+        "方",
+        "穴",
+        "文"
+      ],
+      "topFive": true,
+      "engineMs": 1.8999999910593033,
+      "roundTripMs": 1.8999999910593033
+    },
+    {
+      "character": "本",
+      "variant": 0,
+      "candidates": [
+        "木",
+        "本",
+        "末",
+        "申",
+        "由",
+        "未",
+        "古",
+        "太",
+        "右",
+        "失"
+      ],
+      "topFive": true,
+      "engineMs": 4,
+      "roundTripMs": 4.200000002980232
+    },
+    {
+      "character": "本",
+      "variant": 1,
+      "candidates": [
+        "木",
+        "本",
+        "末",
+        "申",
+        "由",
+        "古",
+        "未",
+        "妃",
+        "太",
+        "衣"
+      ],
+      "topFive": true,
+      "engineMs": 3,
+      "roundTripMs": 3.2999999970197678
+    },
+    {
+      "character": "本",
+      "variant": 2,
+      "candidates": [
+        "本",
+        "申",
+        "木",
+        "末",
+        "由",
+        "古",
+        "太",
+        "妃",
+        "未",
+        "布"
+      ],
+      "topFive": true,
+      "engineMs": 3.0999999940395355,
+      "roundTripMs": 3.2000000029802322
+    },
+    {
+      "character": "休",
+      "variant": 0,
+      "candidates": [
+        "休",
+        "体",
+        "他",
+        "伯",
+        "仲",
+        "伎",
+        "伐",
+        "仮",
+        "作",
+        "件"
+      ],
+      "topFive": true,
+      "engineMs": 5.799999997019768,
+      "roundTripMs": 5.899999991059303
+    },
+    {
+      "character": "休",
+      "variant": 1,
+      "candidates": [
+        "休",
+        "体",
+        "他",
+        "伯",
+        "仲",
+        "仮",
+        "伐",
+        "伎",
+        "作",
+        "伸"
+      ],
+      "topFive": true,
+      "engineMs": 6.700000002980232,
+      "roundTripMs": 7
+    },
+    {
+      "character": "休",
+      "variant": 2,
+      "candidates": [
+        "休",
+        "体",
+        "他",
+        "伯",
+        "仮",
+        "仲",
+        "伐",
+        "位",
+        "伸",
+        "使"
+      ],
+      "topFive": true,
+      "engineMs": 5.200000002980232,
+      "roundTripMs": 5.200000002980232
+    },
+    {
+      "character": "林",
+      "variant": 0,
+      "candidates": [
+        "林",
+        "析",
+        "枚",
+        "放",
+        "板",
+        "枯",
+        "枕",
+        "栃",
+        "故",
+        "枝"
+      ],
+      "topFive": true,
+      "engineMs": 10.399999991059303,
+      "roundTripMs": 10.700000002980232
+    },
+    {
+      "character": "林",
+      "variant": 1,
+      "candidates": [
+        "林",
+        "析",
+        "枚",
+        "板",
+        "栃",
+        "放",
+        "朰",
+        "枕",
+        "枝",
+        "枯"
+      ],
+      "topFive": true,
+      "engineMs": 10.900000005960464,
+      "roundTripMs": 11.099999994039536
+    },
+    {
+      "character": "林",
+      "variant": 2,
+      "candidates": [
+        "林",
+        "析",
+        "枚",
+        "板",
+        "放",
+        "栃",
+        "朰",
+        "枝",
+        "枕",
+        "枯"
+      ],
+      "topFive": true,
+      "engineMs": 10.700000002980232,
+      "roundTripMs": 11
+    },
+    {
+      "character": "森",
+      "variant": 0,
+      "candidates": [
+        "森",
+        "絵",
+        "超",
+        "晶",
+        "給",
+        "務",
+        "鉛",
+        "銑",
+        "雑",
+        "疑"
+      ],
+      "topFive": true,
+      "engineMs": 25,
+      "roundTripMs": 25.30000001192093
+    },
+    {
+      "character": "森",
+      "variant": 1,
+      "candidates": [
+        "森",
+        "絵",
+        "款",
+        "超",
+        "晶",
+        "給",
+        "視",
+        "痴",
+        "説",
+        "務"
+      ],
+      "topFive": true,
+      "engineMs": 22,
+      "roundTripMs": 22.200000002980232
+    },
+    {
+      "character": "森",
+      "variant": 2,
+      "candidates": [
+        "森",
+        "絵",
+        "款",
+        "超",
+        "給",
+        "説",
+        "結",
+        "晶",
+        "媒",
+        "務"
+      ],
+      "topFive": true,
+      "engineMs": 32.70000000298023,
+      "roundTripMs": 33
+    },
+    {
+      "character": "語",
+      "variant": 0,
+      "candidates": [
+        "語",
+        "詰",
+        "話",
+        "詣",
+        "誤",
+        "詮",
+        "諮",
+        "鋳",
+        "誰",
+        "認"
+      ],
+      "topFive": true,
+      "engineMs": 27.799999997019768,
+      "roundTripMs": 28.100000008940697
+    },
+    {
+      "character": "語",
+      "variant": 1,
+      "candidates": [
+        "語",
+        "詰",
+        "話",
+        "詣",
+        "誤",
+        "詮",
+        "読",
+        "踏",
+        "談",
+        "諸"
+      ],
+      "topFive": true,
+      "engineMs": 42.20000000298023,
+      "roundTripMs": 42.5
+    },
+    {
+      "character": "語",
+      "variant": 2,
+      "candidates": [
+        "語",
+        "詰",
+        "誤",
+        "話",
+        "錘",
+        "談",
+        "諮",
+        "諸",
+        "読",
+        "詮"
+      ],
+      "topFive": true,
+      "engineMs": 39.599999994039536,
+      "roundTripMs": 39.80000001192093
+    }
+  ]
+}

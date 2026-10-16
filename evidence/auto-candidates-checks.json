@@ -1,0 +1,32 @@
+{
+  "recordedAt": "2026-10-16T12:55:29.868Z",
+  "observations": {
+    "firstStroke": {
+      "visible": 10,
+      "total": 53,
+      "manualRecognitionClicked": false
+    },
+    "showMore": {
+      "visible": 20
+    },
+    "secondStroke": {
+      "visible": 10,
+      "total": 100
+    },
+    "thirdStroke": {
+      "visible": 20,
+      "total": 100
+    },
+    "undo": {
+      "strokes": 2,
+      "visible": 10
+    },
+    "clear": {
+      "strokes": 0,
+      "visible": 0,
+      "moreVisible": false
+    },
+    "selectedCharacter": "三"
+  },
+  "unitTests": "10 passed, including stale/queued/startup/reset job handling and upstream top-ten ranking parity."
+}

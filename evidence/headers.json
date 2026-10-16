@@ -1,0 +1,96 @@
+{
+  "recordedAt": "2026-10-16T12:26:48.544Z",
+  "note": "HTTP GET headers only. URL fragments never reach the server. No response bodies stored.",
+  "results": [
+    {
+      "requestedUrl": "https://nihongokanji.com/",
+      "finalUrl": "https://nihongokanji.com/",
+      "status": 200,
+      "redirected": false,
+      "xFrameOptions": null,
+      "contentSecurityPolicy": null,
+      "accessControlAllowOrigin": null,
+      "setCookiePresent": false
+    },
+    {
+      "requestedUrl": "https://ja.dict.naver.com/",
+      "finalUrl": "https://ja.dict.naver.com/",
+      "status": 200,
+      "redirected": false,
+      "xFrameOptions": null,
+      "contentSecurityPolicy": null,
+      "accessControlAllowOrigin": null,
+      "setCookiePresent": false
+    },
+    {
+      "requestedUrl": "https://nihongokanji.com/?s=%E6%97%A5",
+      "finalUrl": "https://nihongokanji.com/8/",
+      "status": 200,
+      "redirected": true,
+      "xFrameOptions": null,
+      "contentSecurityPolicy": null,
+      "accessControlAllowOrigin": null,
+      "setCookiePresent": false
+    },
+    {
+      "requestedUrl": "https://nihongokanji.com/?s=%E4%BA%BA",
+      "finalUrl": "https://nihongokanji.com/12/",
+      "status": 200,
+      "redirected": true,
+      "xFrameOptions": null,
+      "contentSecurityPolicy": null,
+      "accessControlAllowOrigin": null,
+      "setCookiePresent": false
+    },
+    {
+      "requestedUrl": "https://nihongokanji.com/?s=%E5%AD%A6",
+      "finalUrl": "https://nihongokanji.com/44/",
+      "status": 200,
+      "redirected": true,
+      "xFrameOptions": null,
+      "contentSecurityPolicy": null,
+      "accessControlAllowOrigin": null,
+      "setCookiePresent": false
+    },
+    {
+      "requestedUrl": "https://nihongokanji.com/?s=%E8%AA%9E",
+      "finalUrl": "https://nihongokanji.com/80/",
+      "status": 200,
+      "redirected": true,
+      "xFrameOptions": null,
+      "contentSecurityPolicy": null,
+      "accessControlAllowOrigin": null,
+      "setCookiePresent": false
+    },
+    {
+      "requestedUrl": "https://nihongokanji.com/?s=%E9%AC%B1",
+      "finalUrl": "https://nihongokanji.com/2136/",
+      "status": 200,
+      "redirected": true,
+      "xFrameOptions": null,
+      "contentSecurityPolicy": null,
+      "accessControlAllowOrigin": null,
+      "setCookiePresent": false
+    },
+    {
+      "requestedUrl": "https://nihongokanji.com/?s=%E5%AD%B8",
+      "finalUrl": "https://nihongokanji.com/?s=%E5%AD%B8",
+      "status": 200,
+      "redirected": false,
+      "xFrameOptions": null,
+      "contentSecurityPolicy": null,
+      "accessControlAllowOrigin": null,
+      "setCookiePresent": false
+    },
+    {
+      "requestedUrl": "https://nihongokanji.com/?s=%F0%A0%AE%B7",
+      "finalUrl": "https://nihongokanji.com/?s=%F0%A0%AE%B7",
+      "status": 200,
+      "redirected": false,
+      "xFrameOptions": null,
+      "contentSecurityPolicy": null,
+      "accessControlAllowOrigin": null,
+      "setCookiePresent": false
+    }
+  ]
+}

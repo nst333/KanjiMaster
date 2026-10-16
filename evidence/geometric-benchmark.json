@@ -1,0 +1,1166 @@
+{
+  "recordedAt": "2026-10-16T12:32:17.227Z",
+  "runtime": "v26.7.0",
+  "platform": "win32 10.0.26200 x64",
+  "cpu": "AMD Ryzen 5 5600X 6-Core Processor             ",
+  "methodology": "60 geometric fixtures from 20 agent-authored polylines with three deterministic variants. NOT a 60-sample human handwriting benchmark. No recognition training patterns used as inputs.",
+  "humanAccuracyGate": "UNVERIFIED: requires independently collected handwriting samples and device/browser validation.",
+  "patternCount": 2213,
+  "uniqueCharacterCount": 2213,
+  "hanCharacterCount": 2213,
+  "coverage": {
+    "日": true,
+    "人": true,
+    "学": true,
+    "語": true,
+    "鬱": true,
+    "學": false,
+    "𠮷": false
+  },
+  "sampleCount": 60,
+  "distinctCharacters": 20,
+  "topFiveRate": 1,
+  "p95Ms": 688.7691000000004,
+  "results": [
+    {
+      "character": "日",
+      "provenance": "agent-authored-geometric-fixture",
+      "variant": 0,
+      "candidates": [
+        "曰",
+        "日",
+        "田",
+        "尺",
+        "同",
+        "目",
+        "句",
+        "白",
+        "司",
+        "石"
+      ],
+      "topFive": true,
+      "elapsedMs": 77.32829999999998
+    },
+    {
+      "character": "日",
+      "provenance": "agent-authored-geometric-fixture",
+      "variant": 1,
+      "candidates": [
+        "曰",
+        "日",
+        "田",
+        "尺",
+        "同",
+        "句",
+        "目",
+        "司",
+        "石",
+        "由"
+      ],
+      "topFive": true,
+      "elapsedMs": 70.06670000000003
+    },
+    {
+      "character": "日",
+      "provenance": "agent-authored-geometric-fixture",
+      "variant": 2,
+      "candidates": [
+        "曰",
+        "日",
+        "田",
+        "目",
+        "尺",
+        "同",
+        "句",
+        "司",
+        "石",
+        "由"
+      ],
+      "topFive": true,
+      "elapsedMs": 79.0695
+    },
+    {
+      "character": "目",
+      "provenance": "agent-authored-geometric-fixture",
+      "variant": 0,
+      "candidates": [
+        "目",
+        "巨",
+        "自",
+        "回",
+        "団",
+        "民",
+        "図",
+        "臣",
+        "円",
+        "臨"
+      ],
+      "topFive": true,
+      "elapsedMs": 117.45439999999996
+    },
+    {
+      "character": "目",
+      "provenance": "agent-authored-geometric-fixture",
+      "variant": 1,
+      "candidates": [
+        "目",
+        "巨",
+        "自",
+        "団",
+        "民",
+        "回",
+        "図",
+        "臣",
+        "円",
+        "臨"
+      ],
+      "topFive": true,
+      "elapsedMs": 118.84710000000007
+    },
+    {
+      "character": "目",
+      "provenance": "agent-authored-geometric-fixture",
+      "variant": 2,
+      "candidates": [
+        "目",
+        "巨",
+        "自",
+        "団",
+        "民",
+        "図",
+        "臨",
+        "回",
+        "臣",
+        "円"
+      ],
+      "topFive": true,
+      "elapsedMs": 117.8315
+    },
+    {
+      "character": "田",
+      "provenance": "agent-authored-geometric-fixture",
+      "variant": 0,
+      "candidates": [
+        "田",
+        "用",
+        "団",
+        "囚",
+        "円",
+        "史",
+        "甲",
+        "申",
+        "回",
+        "白"
+      ],
+      "topFive": true,
+      "elapsedMs": 115.91099999999994
+    },
+    {
+      "character": "田",
+      "provenance": "agent-authored-geometric-fixture",
+      "variant": 1,
+      "candidates": [
+        "田",
+        "用",
+        "団",
+        "囚",
+        "円",
+        "史",
+        "甲",
+        "回",
+        "申",
+        "白"
+      ],
+      "topFive": true,
+      "elapsedMs": 116.99720000000002
+    },
+    {
+      "character": "田",
+      "provenance": "agent-authored-geometric-fixture",
+      "variant": 2,
+      "candidates": [
+        "田",
+        "用",
+        "史",
+        "団",
+        "囚",
+        "円",
+        "回",
+        "申",
+        "目",
+        "因"
+      ],
+      "topFive": true,
+      "elapsedMs": 116.11029999999994
+    },
+    {
+      "character": "由",
+      "provenance": "agent-authored-geometric-fixture",
+      "variant": 0,
+      "candidates": [
+        "由",
+        "田",
+        "史",
+        "白",
+        "申",
+        "曲",
+        "虫",
+        "自",
+        "中",
+        "臨"
+      ],
+      "topFive": true,
+      "elapsedMs": 116.30510000000004
+    },
+    {
+      "character": "由",
+      "provenance": "agent-authored-geometric-fixture",
+      "variant": 1,
+      "candidates": [
+        "由",
+        "史",
+        "田",
+        "白",
+        "申",
+        "曲",
+        "虫",
+        "自",
+        "中",
+        "臨"
+      ],
+      "topFive": true,
+      "elapsedMs": 116.00679999999988
+    },
+    {
+      "character": "由",
+      "provenance": "agent-authored-geometric-fixture",
+      "variant": 2,
+      "candidates": [
+        "由",
+        "田",
+        "白",
+        "申",
+        "史",
+        "曲",
+        "自",
+        "虫",
+        "臨",
+        "図"
+      ],
+      "topFive": true,
+      "elapsedMs": 117.97160000000008
+    },
+    {
+      "character": "申",
+      "provenance": "agent-authored-geometric-fixture",
+      "variant": 0,
+      "candidates": [
+        "田",
+        "申",
+        "史",
+        "由",
+        "曲",
+        "白",
+        "用",
+        "四",
+        "甲",
+        "虫"
+      ],
+      "topFive": true,
+      "elapsedMs": 117.8880999999999
+    },
+    {
+      "character": "申",
+      "provenance": "agent-authored-geometric-fixture",
+      "variant": 1,
+      "candidates": [
+        "田",
+        "申",
+        "史",
+        "由",
+        "曲",
+        "白",
+        "四",
+        "甲",
+        "虫",
+        "用"
+      ],
+      "topFive": true,
+      "elapsedMs": 118.3282999999999
+    },
+    {
+      "character": "申",
+      "provenance": "agent-authored-geometric-fixture",
+      "variant": 2,
+      "candidates": [
+        "田",
+        "申",
+        "史",
+        "由",
+        "曲",
+        "白",
+        "甲",
+        "用",
+        "自",
+        "虫"
+      ],
+      "topFive": true,
+      "elapsedMs": 120.61709999999994
+    },
+    {
+      "character": "甲",
+      "provenance": "agent-authored-geometric-fixture",
+      "variant": 0,
+      "candidates": [
+        "田",
+        "甲",
+        "用",
+        "申",
+        "史",
+        "団",
+        "回",
+        "由",
+        "囚",
+        "皿"
+      ],
+      "topFive": true,
+      "elapsedMs": 120.30259999999998
+    },
+    {
+      "character": "甲",
+      "provenance": "agent-authored-geometric-fixture",
+      "variant": 1,
+      "candidates": [
+        "田",
+        "用",
+        "甲",
+        "申",
+        "史",
+        "団",
+        "回",
+        "囚",
+        "由",
+        "圧"
+      ],
+      "topFive": true,
+      "elapsedMs": 117.04040000000009
+    },
+    {
+      "character": "甲",
+      "provenance": "agent-authored-geometric-fixture",
+      "variant": 2,
+      "candidates": [
+        "田",
+        "用",
+        "史",
+        "甲",
+        "申",
+        "回",
+        "団",
+        "囚",
+        "由",
+        "円"
+      ],
+      "topFive": true,
+      "elapsedMs": 119.58989999999994
+    },
+    {
+      "character": "白",
+      "provenance": "agent-authored-geometric-fixture",
+      "variant": 0,
+      "candidates": [
+        "白",
+        "自",
+        "臨",
+        "曰",
+        "日",
+        "円",
+        "臼",
+        "句",
+        "田",
+        "由"
+      ],
+      "topFive": true,
+      "elapsedMs": 107.45690000000013
+    },
+    {
+      "character": "白",
+      "provenance": "agent-authored-geometric-fixture",
+      "variant": 1,
+      "candidates": [
+        "白",
+        "自",
+        "臨",
+        "曰",
+        "臼",
+        "日",
+        "円",
+        "句",
+        "田",
+        "由"
+      ],
+      "topFive": true,
+      "elapsedMs": 107.3440999999998
+    },
+    {
+      "character": "白",
+      "provenance": "agent-authored-geometric-fixture",
+      "variant": 2,
+      "candidates": [
+        "白",
+        "自",
+        "臨",
+        "曰",
+        "臼",
+        "円",
+        "日",
+        "句",
+        "田",
+        "由"
+      ],
+      "topFive": true,
+      "elapsedMs": 107.82870000000003
+    },
+    {
+      "character": "百",
+      "provenance": "agent-authored-geometric-fixture",
+      "variant": 0,
+      "candidates": [
+        "百",
+        "巨",
+        "臨",
+        "声",
+        "目",
+        "臣",
+        "自",
+        "市",
+        "角",
+        "回"
+      ],
+      "topFive": true,
+      "elapsedMs": 174.59130000000005
+    },
+    {
+      "character": "百",
+      "provenance": "agent-authored-geometric-fixture",
+      "variant": 1,
+      "candidates": [
+        "百",
+        "巨",
+        "臨",
+        "声",
+        "目",
+        "臣",
+        "自",
+        "角",
+        "再",
+        "市"
+      ],
+      "topFive": true,
+      "elapsedMs": 177.23759999999993
+    },
+    {
+      "character": "百",
+      "provenance": "agent-authored-geometric-fixture",
+      "variant": 2,
+      "candidates": [
+        "百",
+        "巨",
+        "臨",
+        "目",
+        "角",
+        "声",
+        "再",
+        "臣",
+        "自",
+        "回"
+      ],
+      "topFive": true,
+      "elapsedMs": 181.0418999999997
+    },
+    {
+      "character": "月",
+      "provenance": "agent-authored-geometric-fixture",
+      "variant": 0,
+      "candidates": [
+        "尺",
+        "曰",
+        "円",
+        "日",
+        "月",
+        "口",
+        "巳",
+        "句",
+        "向",
+        "回"
+      ],
+      "topFive": true,
+      "elapsedMs": 72.61079999999993
+    },
+    {
+      "character": "月",
+      "provenance": "agent-authored-geometric-fixture",
+      "variant": 1,
+      "candidates": [
+        "尺",
+        "曰",
+        "円",
+        "月",
+        "口",
+        "日",
+        "巳",
+        "句",
+        "回",
+        "向"
+      ],
+      "topFive": true,
+      "elapsedMs": 71.52269999999999
+    },
+    {
+      "character": "月",
+      "provenance": "agent-authored-geometric-fixture",
+      "variant": 2,
+      "candidates": [
+        "尺",
+        "曰",
+        "円",
+        "月",
+        "日",
+        "口",
+        "巳",
+        "句",
+        "向",
+        "回"
+      ],
+      "topFive": true,
+      "elapsedMs": 72.06349999999975
+    },
+    {
+      "character": "人",
+      "provenance": "agent-authored-geometric-fixture",
+      "variant": 0,
+      "candidates": [
+        "人",
+        "九",
+        "八",
+        "力",
+        "片",
+        "仁",
+        "小",
+        "山",
+        "幻",
+        "勹"
+      ],
+      "topFive": true,
+      "elapsedMs": 22.186199999999644
+    },
+    {
+      "character": "人",
+      "provenance": "agent-authored-geometric-fixture",
+      "variant": 1,
+      "candidates": [
+        "人",
+        "九",
+        "八",
+        "力",
+        "片",
+        "仁",
+        "小",
+        "山",
+        "幻",
+        "勹"
+      ],
+      "topFive": true,
+      "elapsedMs": 23.414299999999912
+    },
+    {
+      "character": "人",
+      "provenance": "agent-authored-geometric-fixture",
+      "variant": 2,
+      "candidates": [
+        "人",
+        "九",
+        "八",
+        "力",
+        "片",
+        "仁",
+        "山",
+        "小",
+        "幻",
+        "勹"
+      ],
+      "topFive": true,
+      "elapsedMs": 22.557900000000245
+    },
+    {
+      "character": "入",
+      "provenance": "agent-authored-geometric-fixture",
+      "variant": 0,
+      "candidates": [
+        "入",
+        "刀",
+        "八",
+        "口",
+        "川",
+        "刃",
+        "勹",
+        "公",
+        "乃",
+        "丁"
+      ],
+      "topFive": true,
+      "elapsedMs": 21.797000000000025
+    },
+    {
+      "character": "入",
+      "provenance": "agent-authored-geometric-fixture",
+      "variant": 1,
+      "candidates": [
+        "入",
+        "刀",
+        "八",
+        "口",
+        "川",
+        "刃",
+        "勹",
+        "公",
+        "乃",
+        "亡"
+      ],
+      "topFive": true,
+      "elapsedMs": 21.862500000000182
+    },
+    {
+      "character": "入",
+      "provenance": "agent-authored-geometric-fixture",
+      "variant": 2,
+      "candidates": [
+        "入",
+        "刀",
+        "刃",
+        "川",
+        "口",
+        "八",
+        "乃",
+        "勹",
+        "亡",
+        "九"
+      ],
+      "topFive": true,
+      "elapsedMs": 21.97300000000041
+    },
+    {
+      "character": "大",
+      "provenance": "agent-authored-geometric-fixture",
+      "variant": 0,
+      "candidates": [
+        "犬",
+        "大",
+        "太",
+        "火",
+        "丈",
+        "乃",
+        "力",
+        "右",
+        "元",
+        "双"
+      ],
+      "topFive": true,
+      "elapsedMs": 45.882400000000416
+    },
+    {
+      "character": "大",
+      "provenance": "agent-authored-geometric-fixture",
+      "variant": 1,
+      "candidates": [
+        "犬",
+        "大",
+        "太",
+        "火",
+        "丈",
+        "力",
+        "乃",
+        "右",
+        "元",
+        "双"
+      ],
+      "topFive": true,
+      "elapsedMs": 53.95580000000018
+    },
+    {
+      "character": "大",
+      "provenance": "agent-authored-geometric-fixture",
+      "variant": 2,
+      "candidates": [
+        "犬",
+        "大",
+        "太",
+        "力",
+        "火",
+        "丈",
+        "双",
+        "片",
+        "右",
+        "万"
+      ],
+      "topFive": true,
+      "elapsedMs": 48.99980000000005
+    },
+    {
+      "character": "太",
+      "provenance": "agent-authored-geometric-fixture",
+      "variant": 0,
+      "candidates": [
+        "太",
+        "大",
+        "右",
+        "友",
+        "丈",
+        "木",
+        "万",
+        "廿",
+        "乃",
+        "向"
+      ],
+      "topFive": true,
+      "elapsedMs": 71.88940000000002
+    },
+    {
+      "character": "太",
+      "provenance": "agent-authored-geometric-fixture",
+      "variant": 1,
+      "candidates": [
+        "太",
+        "大",
+        "友",
+        "右",
+        "丈",
+        "木",
+        "万",
+        "廿",
+        "向",
+        "乃"
+      ],
+      "topFive": true,
+      "elapsedMs": 70.01279999999997
+    },
+    {
+      "character": "太",
+      "provenance": "agent-authored-geometric-fixture",
+      "variant": 2,
+      "candidates": [
+        "太",
+        "大",
+        "右",
+        "友",
+        "丈",
+        "万",
+        "木",
+        "白",
+        "在",
+        "廿"
+      ],
+      "topFive": true,
+      "elapsedMs": 70.94650000000001
+    },
+    {
+      "character": "犬",
+      "provenance": "agent-authored-geometric-fixture",
+      "variant": 0,
+      "candidates": [
+        "犬",
+        "大",
+        "火",
+        "天",
+        "光",
+        "片",
+        "乃",
+        "尺",
+        "夫",
+        "壮"
+      ],
+      "topFive": true,
+      "elapsedMs": 72.17879999999968
+    },
+    {
+      "character": "犬",
+      "provenance": "agent-authored-geometric-fixture",
+      "variant": 1,
+      "candidates": [
+        "犬",
+        "大",
+        "火",
+        "天",
+        "光",
+        "片",
+        "乃",
+        "尺",
+        "夫",
+        "壮"
+      ],
+      "topFive": true,
+      "elapsedMs": 71.53179999999975
+    },
+    {
+      "character": "犬",
+      "provenance": "agent-authored-geometric-fixture",
+      "variant": 2,
+      "candidates": [
+        "犬",
+        "大",
+        "火",
+        "天",
+        "光",
+        "片",
+        "乃",
+        "夫",
+        "尺",
+        "壮"
+      ],
+      "topFive": true,
+      "elapsedMs": 68.63120000000026
+    },
+    {
+      "character": "木",
+      "provenance": "agent-authored-geometric-fixture",
+      "variant": 0,
+      "candidates": [
+        "木",
+        "本",
+        "末",
+        "大",
+        "奴",
+        "元",
+        "方",
+        "穴",
+        "太",
+        "中"
+      ],
+      "topFive": true,
+      "elapsedMs": 74.40890000000036
+    },
+    {
+      "character": "木",
+      "provenance": "agent-authored-geometric-fixture",
+      "variant": 1,
+      "candidates": [
+        "木",
+        "末",
+        "本",
+        "奴",
+        "大",
+        "元",
+        "太",
+        "穴",
+        "方",
+        "六"
+      ],
+      "topFive": true,
+      "elapsedMs": 75.5560000000005
+    },
+    {
+      "character": "木",
+      "provenance": "agent-authored-geometric-fixture",
+      "variant": 2,
+      "candidates": [
+        "木",
+        "本",
+        "末",
+        "大",
+        "奴",
+        "太",
+        "元",
+        "方",
+        "穴",
+        "文"
+      ],
+      "topFive": true,
+      "elapsedMs": 75.99499999999989
+    },
+    {
+      "character": "本",
+      "provenance": "agent-authored-geometric-fixture",
+      "variant": 0,
+      "candidates": [
+        "木",
+        "本",
+        "末",
+        "申",
+        "由",
+        "未",
+        "古",
+        "太",
+        "右",
+        "失"
+      ],
+      "topFive": true,
+      "elapsedMs": 120.46799999999985
+    },
+    {
+      "character": "本",
+      "provenance": "agent-authored-geometric-fixture",
+      "variant": 1,
+      "candidates": [
+        "木",
+        "本",
+        "末",
+        "申",
+        "由",
+        "古",
+        "未",
+        "妃",
+        "太",
+        "衣"
+      ],
+      "topFive": true,
+      "elapsedMs": 120.79590000000007
+    },
+    {
+      "character": "本",
+      "provenance": "agent-authored-geometric-fixture",
+      "variant": 2,
+      "candidates": [
+        "本",
+        "申",
+        "木",
+        "末",
+        "由",
+        "古",
+        "太",
+        "妃",
+        "未",
+        "布"
+      ],
+      "topFive": true,
+      "elapsedMs": 121.66029999999955
+    },
+    {
+      "character": "休",
+      "provenance": "agent-authored-geometric-fixture",
+      "variant": 0,
+      "candidates": [
+        "休",
+        "体",
+        "他",
+        "伯",
+        "仲",
+        "伎",
+        "伐",
+        "仮",
+        "作",
+        "件"
+      ],
+      "topFive": true,
+      "elapsedMs": 182.28120000000035
+    },
+    {
+      "character": "休",
+      "provenance": "agent-authored-geometric-fixture",
+      "variant": 1,
+      "candidates": [
+        "休",
+        "体",
+        "他",
+        "伯",
+        "仲",
+        "仮",
+        "伐",
+        "伎",
+        "作",
+        "伸"
+      ],
+      "topFive": true,
+      "elapsedMs": 182.36809999999969
+    },
+    {
+      "character": "休",
+      "provenance": "agent-authored-geometric-fixture",
+      "variant": 2,
+      "candidates": [
+        "休",
+        "体",
+        "他",
+        "伯",
+        "仮",
+        "仲",
+        "伐",
+        "位",
+        "伸",
+        "使"
+      ],
+      "topFive": true,
+      "elapsedMs": 187.04210000000057
+    },
+    {
+      "character": "林",
+      "provenance": "agent-authored-geometric-fixture",
+      "variant": 0,
+      "candidates": [
+        "林",
+        "析",
+        "枚",
+        "放",
+        "板",
+        "枯",
+        "枕",
+        "栃",
+        "故",
+        "枝"
+      ],
+      "topFive": true,
+      "elapsedMs": 369.76730000000043
+    },
+    {
+      "character": "林",
+      "provenance": "agent-authored-geometric-fixture",
+      "variant": 1,
+      "candidates": [
+        "林",
+        "析",
+        "枚",
+        "板",
+        "栃",
+        "放",
+        "朰",
+        "枕",
+        "枝",
+        "枯"
+      ],
+      "topFive": true,
+      "elapsedMs": 364.16779999999926
+    },
+    {
+      "character": "林",
+      "provenance": "agent-authored-geometric-fixture",
+      "variant": 2,
+      "candidates": [
+        "林",
+        "析",
+        "枚",
+        "板",
+        "放",
+        "栃",
+        "朰",
+        "枝",
+        "枕",
+        "枯"
+      ],
+      "topFive": true,
+      "elapsedMs": 356.7546000000002
+    },
+    {
+      "character": "森",
+      "provenance": "agent-authored-geometric-fixture",
+      "variant": 0,
+      "candidates": [
+        "森",
+        "絵",
+        "超",
+        "晶",
+        "給",
+        "務",
+        "鉛",
+        "銑",
+        "雑",
+        "疑"
+      ],
+      "topFive": true,
+      "elapsedMs": 682.0329000000002
+    },
+    {
+      "character": "森",
+      "provenance": "agent-authored-geometric-fixture",
+      "variant": 1,
+      "candidates": [
+        "森",
+        "絵",
+        "款",
+        "超",
+        "晶",
+        "給",
+        "視",
+        "痴",
+        "説",
+        "務"
+      ],
+      "topFive": true,
+      "elapsedMs": 688.7691000000004
+    },
+    {
+      "character": "森",
+      "provenance": "agent-authored-geometric-fixture",
+      "variant": 2,
+      "candidates": [
+        "森",
+        "絵",
+        "款",
+        "超",
+        "給",
+        "説",
+        "結",
+        "晶",
+        "媒",
+        "務"
+      ],
+      "topFive": true,
+      "elapsedMs": 685.9617000000007
+    },
+    {
+      "character": "語",
+      "provenance": "agent-authored-geometric-fixture",
+      "variant": 0,
+      "candidates": [
+        "語",
+        "詰",
+        "話",
+        "詣",
+        "誤",
+        "詮",
+        "諮",
+        "鋳",
+        "誰",
+        "認"
+      ],
+      "topFive": true,
+      "elapsedMs": 719.6670999999988
+    },
+    {
+      "character": "語",
+      "provenance": "agent-authored-geometric-fixture",
+      "variant": 1,
+      "candidates": [
+        "語",
+        "詰",
+        "話",
+        "詣",
+        "誤",
+        "詮",
+        "読",
+        "踏",
+        "談",
+        "諸"
+      ],
+      "topFive": true,
+      "elapsedMs": 691.4812000000002
+    },
+    {
+      "character": "語",
+      "provenance": "agent-authored-geometric-fixture",
+      "variant": 2,
+      "candidates": [
+        "語",
+        "詰",
+        "誤",
+        "話",
+        "錘",
+        "談",
+        "諮",
+        "諸",
+        "読",
+        "詮"
+      ],
+      "topFive": true,
+      "elapsedMs": 714.8069000000014
+    }
+  ]
+}
