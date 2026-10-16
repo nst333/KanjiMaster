@@ -16,7 +16,7 @@ Open http://127.0.0.1:4173/. To use a different port:
 npm run dev -- 4174
 ```
 
-- `/`: handwriting input, recognition candidates, exact-character search, dual original-page iframes, collapse, resizing, mobile tabs, and original-page links.
+- `/`: handwriting input, recognition candidates, exact-character search, and independent reference toggles. The study reference is on by default. One reference uses a 30:70 handwriting/reading layout on desktop; both references restore handwriting above two resizable panes. Mobile uses a vertical layout with tabs when both references are on. References load the selected character when enabled.
 - `/benchmark.html`: browser worker timing against 60 explicitly geometric fixtures.
 - `/responsive.html`: layout testing at 1440, 1024, 768, and 390 CSS pixels inside an iframe. This is not mobile-device emulation.
 

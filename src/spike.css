@@ -216,6 +216,81 @@ main {
   padding: 0 24px;
 }
 
+.reference-toggles {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 24px;
+  margin: 16px 0;
+  padding: 0;
+  border: 0;
+}
+
+.reference-toggles legend {
+  float: left;
+  margin-right: 24px;
+  padding: 0;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 44px;
+}
+
+.reference-toggle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 44px;
+  cursor: pointer;
+}
+
+.reference-toggle input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  min-height: 0;
+  margin: 0;
+  opacity: 0;
+}
+
+.toggle-track {
+  width: 34px;
+  height: 20px;
+  flex-shrink: 0;
+  padding: 2px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #e1e4dc;
+}
+
+.toggle-track::after {
+  content: '';
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #fffefa;
+  box-shadow: 0 1px 2px #344d4133;
+}
+
+.reference-toggle input:checked + .toggle-track {
+  background: #45664f;
+  border-color: #45664f;
+}
+
+.reference-toggle input:checked + .toggle-track::after {
+  transform: translateX(14px);
+}
+
+.reference-toggle input:focus-visible + .toggle-track {
+  outline: 2px solid #477454;
+  outline-offset: 3px;
+}
+
+.reading-area {
+  min-width: 0;
+}
+
 #input-panel {
   margin-top: 16px;
   padding: 0 18px;
@@ -472,6 +547,85 @@ canvas {
   color: #6a7668;
 }
 
+.reference-empty {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 24px;
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.reference-empty p:first-child {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+#workspace:not([data-view="both"]) #comparison {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+#workspace:not([data-view="both"]) #candidates:empty::before {
+  content: '위에 한자를 써 주세요.';
+}
+
+@media (min-width: 768px) {
+  #workspace:not([data-view="both"]) {
+    display: grid;
+    grid-template-columns: minmax(280px, 3fr) minmax(0, 7fr);
+    align-items: start;
+    gap: 20px;
+  }
+
+  #workspace:not([data-view="both"]) #input-panel {
+    min-width: 0;
+    margin-top: 0;
+  }
+
+  #workspace:not([data-view="both"]) .input-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+
+  #workspace:not([data-view="both"]) .drawing-section {
+    border: 0;
+    padding: 0;
+  }
+
+  #workspace:not([data-view="both"]) canvas {
+    width: min(100%, 256px);
+    height: auto;
+    aspect-ratio: 1;
+    margin: 0 auto;
+  }
+
+  #workspace:not([data-view="both"]) .controls {
+    justify-content: center;
+  }
+
+  #workspace:not([data-view="both"]) .drawing-caption {
+    max-width: 256px;
+    margin: 8px auto 0;
+  }
+
+  #workspace:not([data-view="both"]) .candidate-section {
+    border-top: 1px solid var(--rule);
+    padding-top: 16px;
+  }
+
+  #workspace:not([data-view="both"]) .reading-toolbar {
+    padding-top: 0;
+  }
+
+  #workspace:not([data-view="both"]) #comparison {
+    height: max(600px, calc(100dvh - 180px));
+  }
+}
+
 iframe {
   display: block;
   width: 100%;
@@ -619,6 +773,22 @@ footer {
 
   main {
     padding: 0 16px;
+  }
+
+  .reference-toggles {
+    gap: 0 16px;
+    margin: 10px 0;
+  }
+
+  .reference-toggles legend {
+    float: none;
+    margin-right: 0;
+    line-height: 24px;
+  }
+
+  .reference-toggle {
+    font-size: 11px;
+    gap: 7px;
   }
 
   #input-panel {

@@ -76,7 +76,7 @@ function renderCandidates(from = 0) {
   const nextCount = Math.min(10, candidates.length - visibleCandidateCount);
   $('more-candidates').textContent = nextCount ? `후보 ${nextCount}개 더 보기` : '후보 더보기';
   $('candidate-count').textContent = `${visibleCandidateCount}개 표시 · 전체 ${candidates.length}개`;
-  $('recognition-status').textContent = candidates.length ? '찾는 한자를 선택하면 두 사전에서 검색합니다.' : '일치하는 글자가 없습니다. 다시 쓰거나 직접 입력하세요.';
+  $('recognition-status').textContent = candidates.length ? '찾는 한자를 선택하면 켜 둔 사전에서 검색합니다.' : '일치하는 글자가 없습니다. 다시 쓰거나 직접 입력하세요.';
   if (from) {
     // Reveal the newly appended batch within the candidate list, without scrolling the page.
     $('candidates').scrollTop = $('candidates').scrollHeight;
@@ -131,8 +131,11 @@ $('more-candidates').onclick = () => {
 startEngine();
 
 const frameTimers = new Map();
+const loadedReferences = new Map();
+let selectedReferences = [];
 function loadReference(reference) {
   const { source, url } = reference;
+  loadedReferences.set(source, url);
   clearTimeout(frameTimers.get(source));
   const slot = $(`frame-${source}`); const status = $(`status-${source}`); const link = $(`open-${source}`);
   link.href = url; link.hidden = false; $(`reload-${source}`).disabled = false;
@@ -146,15 +149,23 @@ function loadReference(reference) {
 }
 function selectCharacter(character) {
   const references = resolveReferences(character);
+  selectedReferences = references;
   $('selected').textContent = character; $('manual').value = character; $('manual-error').textContent = '';
   for (const button of $('candidates').children) button.setAttribute('aria-pressed', String(button.textContent === character));
-  for (const reference of references) loadReference(reference);
+  for (const reference of references) {
+    if ($(`show-${reference.source}`).checked) loadReference(reference);
+  }
 }
 $('manual-form').onsubmit = event => { event.preventDefault(); try { selectCharacter($('manual').value); $('manual').removeAttribute('aria-invalid'); } catch (error) { $('manual-error').textContent = error.message; $('manual').setAttribute('aria-invalid', 'true'); } };
 
 const divider = $('divider'), comparison = $('comparison');
-function setSplit(value) { value = Math.max(25, Math.min(75, value)); comparison.style.gridTemplateColumns = `minmax(0, ${value}fr) 12px minmax(0, ${100-value}fr)`; divider.setAttribute('aria-valuenow', String(Math.round(value))); }
 let resizePointer = null;
+let splitValue = 50;
+function setSplit(value) {
+  splitValue = Math.max(25, Math.min(75, value));
+  comparison.style.gridTemplateColumns = `minmax(0, ${splitValue}fr) 12px minmax(0, ${100-splitValue}fr)`;
+  divider.setAttribute('aria-valuenow', String(Math.round(splitValue)));
+}
 divider.onpointerdown = event => { resizePointer = event.pointerId; divider.setPointerCapture(event.pointerId); document.body.classList.add('resizing'); };
 divider.onpointermove = event => { if (resizePointer !== event.pointerId) return; const rect = comparison.getBoundingClientRect(); setSplit((event.clientX - rect.left) / rect.width * 100); };
 function endResize() { resizePointer = null; document.body.classList.remove('resizing'); }
@@ -166,6 +177,26 @@ function activateTab(source, focus = false) {
   if (focus) $(`tab-${source}`).focus();
 }
 for (const source of ['nihongo','naver']) { const tab = $(`tab-${source}`); tab.onclick = () => activateTab(source); tab.onkeydown = event => { if (['ArrowLeft','ArrowRight','Home','End'].includes(event.key)) { event.preventDefault(); activateTab(event.key === 'Home' ? 'nihongo' : event.key === 'End' ? 'naver' : source === 'nihongo' ? 'naver' : 'nihongo', true); } }; }
+
+function updateReferenceView() {
+  const sources = ['nihongo', 'naver'];
+  const enabled = sources.filter(source => $(`show-${source}`).checked);
+  const both = enabled.length === 2;
+  $('workspace').dataset.view = both ? 'both' : enabled.length ? 'single' : 'none';
+  for (const source of sources) $(`pane-${source}`).hidden = !enabled.includes(source);
+  divider.hidden = $('reset-split').hidden = $('reference-tabs').hidden = !both;
+  $('reference-empty').hidden = enabled.length !== 0;
+  endResize();
+  if (both) setSplit(splitValue);
+  else comparison.style.removeProperty('grid-template-columns');
+  const activeSource = enabled.find(source => $(`tab-${source}`).getAttribute('aria-selected') === 'true') || enabled[0];
+  if (activeSource) activateTab(activeSource);
+  for (const reference of selectedReferences) {
+    if (enabled.includes(reference.source) && loadedReferences.get(reference.source) !== reference.url) loadReference(reference);
+  }
+}
+for (const source of ['nihongo', 'naver']) $(`show-${source}`).onchange = updateReferenceView;
+updateReferenceView();
 
 $('save-sample').onclick = () => {
   try {
