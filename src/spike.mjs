@@ -113,7 +113,7 @@ function requestRecognition() {
 function startEngine() {
   worker?.terminate(); engineReady = false; recognitionQueue.reset(); clearTimeout(pendingTimer);
   // Classic workers permit importScripts; async import is wrapped in an IIFE.
-  worker = new Worker('/src/recognition-worker.js');
+  worker = new Worker(new URL('./recognition-worker.js', import.meta.url));
   worker.onmessage = ({ data }) => {
     if (data.ready) { engineReady = true; $('recognition-status').textContent = '획을 마칠 때마다 자동으로 인식합니다.'; recognitionQueue.setReady(); redraw(); return; }
     if (data.fatal) { $('recognition-status').textContent = `인식 엔진 오류: ${data.fatal}. 직접 입력을 이용하세요.`; return; }

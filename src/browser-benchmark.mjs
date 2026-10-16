@@ -1,5 +1,5 @@
 import { geometricSamples } from '../fixtures/geometric-samples.mjs';
-const worker = new Worker('/src/recognition-worker.js');
+const worker = new Worker(new URL('./recognition-worker.js', import.meta.url));
 let resolve, reject;
 worker.onmessage=({data})=>{
   if(data.ready){ document.getElementById('run').disabled=false; document.getElementById('status').textContent='준비 완료'; return; }
