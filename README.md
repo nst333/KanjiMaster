@@ -22,6 +22,8 @@ npm run dev -- 4174
 
 The header's **구버전 / 신버전** selector switches between the classic pastel design and the new aurora glass design. First visits use glass; the last selection is saved in `localStorage` under `kanjimaster.design`. The theme is applied before styles load. Switching changes only the document theme, preserving handwriting, results, open groups and existing iframe browsing contexts. If storage is unavailable, glass is the default and switching still works for the current page. External reference pages retain their original appearance.
 
+**설정 → 레이저 효과** controls the handwriting glow and bright core in either design. The default is on, with the last selection stored under `kanjimaster.laser`. Turning it off retains the thicker blue-violet-rose gradient. Changes repaint existing strokes immediately; recognition continues to use their original coordinates.
+
 The vendor engine and its patterns are already included. Restore the exact pinned revision if necessary:
 
 ```sh

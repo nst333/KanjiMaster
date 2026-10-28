@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>KanjiMaster · 한자 찾기</title>
     <script src="./src/design-switch.js?v=glass-v1"></script>
-    <link rel="stylesheet" href="./src/spike.css?v=glass-v1">
-    <link rel="stylesheet" href="./src/glass.css?v=glass-v1">
+    <link rel="stylesheet" href="./src/spike.css?v=laser-ink-v1">
+    <link rel="stylesheet" href="./src/glass.css?v=laser-ink-v1">
 </head>
 
 <body>
@@ -18,6 +18,17 @@
                 <label><input type="radio" name="design" value="legacy"><span>구버전</span></label>
                 <label><input type="radio" name="design" value="glass" checked><span>신버전</span></label>
             </fieldset>
+            <details id="ink-settings" class="ink-settings">
+                <summary>설정</summary>
+                <div class="ink-settings-panel">
+                    <h2>필기 설정</h2>
+                    <label class="reference-toggle" for="laser-effect">
+                        <input type="checkbox" role="switch" id="laser-effect" aria-controls="drawing" checked>
+                        <span class="toggle-track" aria-hidden="true"></span><span>레이저 효과</span>
+                    </label>
+                    <p>획 주변에 빛과 밝은 중심선을 더해요.</p>
+                </div>
+            </details>
         </div>
         <div class="brand">
             <figure class="study-companion"><img src="./assets/study-blob.png" alt="민트색 책갈피를 단 연보라색 젤리 캐릭터" width="106"
@@ -130,7 +141,7 @@
             <p id="sample-status" role="status">수집된 샘플 0개</p>
         </details>
     </footer>
-    <script type="module" src="./src/spike.mjs?v=gradient-ink-v1"></script>
+    <script type="module" src="./src/spike.mjs?v=laser-ink-v1"></script>
 </body>
 
 </html>

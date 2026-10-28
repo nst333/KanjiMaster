@@ -96,6 +96,23 @@
   box-shadow: 0 3px 8px rgb(83 66 159 / .18);
 }
 
+:root[data-design="glass"] .ink-settings > summary {
+  border-color: rgb(255 255 255 / .95);
+  background: rgb(255 255 255 / .6);
+  color: #454c74;
+}
+
+:root[data-design="glass"] .ink-settings[open] > summary {
+  background: #eee9ff;
+  border-color: #bdb4df;
+}
+
+:root[data-design="glass"] .ink-settings-panel {
+  border-color: #dedcf0;
+  background: #fbfaff;
+  box-shadow: 0 12px 36px rgb(74 65 130 / .16);
+}
+
 :root[data-design="glass"] #manual-form {
   grid-column: 2;
   grid-row: 2;

@@ -54,6 +54,8 @@ body {
   grid-column: 1 / -1;
   grid-row: 1;
   display: flex;
+  align-items: center;
+  gap: 10px;
   justify-content: flex-end;
   margin-bottom: -12px;
 }
@@ -102,6 +104,56 @@ body {
 .design-switch input:focus-visible + span {
   outline: 2px solid #477454;
   outline-offset: 2px;
+}
+
+.ink-settings {
+  position: relative;
+  flex-shrink: 0;
+  z-index: 20;
+}
+
+.ink-settings > summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 8px 16px;
+  list-style: none;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 11px;
+}
+
+.ink-settings > summary::-webkit-details-marker {
+  display: none;
+}
+
+.ink-settings[open] > summary {
+  background: var(--mint);
+}
+
+.ink-settings-panel {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  width: min(264px, calc(100vw - 36px));
+  padding: 16px 18px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+  box-shadow: 0 10px 32px #344d4126;
+}
+
+.ink-settings-panel h2 {
+  margin: 0 0 8px;
+  font-size: 13px;
+}
+
+.ink-settings-panel p {
+  margin-top: 4px;
+  font-size: 11px;
 }
 
 button,

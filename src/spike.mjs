@@ -1,5 +1,6 @@
 import { isSingleKanji, extractKanji, validateStrokes } from './domain.mjs';
 import { createReferenceResults } from './reference-results.mjs';
+import { createInkSettings } from './ink-settings.mjs';
 import { LatestRecognitionQueue } from './recognition-queue.mjs';
 const $ = id => document.getElementById(id);
 const canvas = $('drawing');
@@ -9,6 +10,7 @@ let candidates = [], visibleCandidateCount = 0;
 const samples = [];
 const inputTypes = new Set();
 const recognitionQueue = new LatestRecognitionQueue(sendRecognition, showRecognition);
+const inkSettings = createInkSettings(redraw);
 
 function invalidate(clear = true) {
   recognitionQueue.invalidate();
@@ -33,14 +35,34 @@ function redraw() {
   ink.addColorStop(0, '#3676d8');
   ink.addColorStop(0.45, '#8052c5');
   ink.addColorStop(1, '#cf4f91');
-  ctx.strokeStyle = ink;
-  ctx.lineWidth = 3; ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+  ctx.save();
+  ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+  ctx.beginPath();
   for (const stroke of [...strokes, ...(active ? [active.points] : [])]) {
     if (!stroke.length) continue;
-    ctx.beginPath(); ctx.moveTo(...stroke[0]);
+    ctx.moveTo(...stroke[0]);
     for (const point of stroke.slice(1)) ctx.lineTo(...point);
+  }
+  if (inkSettings.enabled) {
+    ctx.strokeStyle = ink;
+    ctx.lineWidth = 8;
+    ctx.globalAlpha = 0.25;
+    // Canvas shadow blur uses physical pixels rather than the current transform.
+    ctx.shadowBlur = 10 * pixels / 256;
+    ctx.shadowColor = '#9366df';
+    ctx.stroke();
+    ctx.shadowBlur = 0;
+    ctx.globalAlpha = 1;
+  }
+  ctx.strokeStyle = ink;
+  ctx.lineWidth = 4.5;
+  ctx.stroke();
+  if (inkSettings.enabled) {
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.8)';
+    ctx.lineWidth = 1.2;
     ctx.stroke();
   }
+  ctx.restore();
   $('stroke-count').textContent = `${strokes.length}획`;
   $('undo').disabled = $('clear').disabled = !strokes.length && !active;
   $('recognize').disabled = !engineReady || !strokes.length || !!active || !!recognitionQueue.running;
