@@ -38,6 +38,72 @@ body {
   margin: 0;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+.design-toolbar {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: -12px;
+}
+
+.design-switch {
+  display: inline-flex;
+  gap: 3px;
+  margin: 0;
+  padding: 3px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+}
+
+.design-switch label {
+  position: relative;
+  cursor: pointer;
+}
+
+.design-switch input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  min-height: 0;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+}
+
+.design-switch span {
+  display: grid;
+  place-items: center;
+  min-width: 72px;
+  min-height: 36px;
+  padding: 0 14px;
+  border-radius: 999px;
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.design-switch input:checked + span {
+  background: var(--ink);
+  color: #fff;
+}
+
+.design-switch input:focus-visible + span {
+  outline: 2px solid #477454;
+  outline-offset: 2px;
+}
+
 button,
 input,
 a {
@@ -512,6 +578,10 @@ canvas {
   border-radius: 12px 12px 0 0;
 }
 
+.kanji-result > summary:focus-visible {
+  outline-offset: -4px;
+}
+
 .result-character {
   font: 28px/1.2 'Yu Mincho', 'Hiragino Mincho ProN', 'Meiryo', serif;
   vertical-align: middle;
@@ -777,6 +847,19 @@ footer {
 }
 
 @media (max-width: 767px) {
+  .site-header .brand,
+  .site-header .selected-note {
+    grid-row: 2;
+  }
+
+  .site-header #manual-form {
+    grid-row: 3;
+  }
+
+  .design-toolbar {
+    margin-bottom: 0;
+  }
+
   .site-header {
     grid-template-columns: minmax(0, 1fr) auto;
     padding: 12px 16px;

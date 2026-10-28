@@ -5,11 +5,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>KanjiMaster · 한자 찾기</title>
-    <link rel="stylesheet" href="./src/spike.css?v=20261029-source-row">
+    <script src="./src/design-switch.js?v=glass-v1"></script>
+    <link rel="stylesheet" href="./src/spike.css?v=glass-v1">
+    <link rel="stylesheet" href="./src/glass.css?v=glass-v1">
 </head>
 
 <body>
     <header class="site-header">
+        <div class="design-toolbar">
+            <fieldset class="design-switch">
+                <legend class="visually-hidden">디자인 선택</legend>
+                <label><input type="radio" name="design" value="legacy"><span>구버전</span></label>
+                <label><input type="radio" name="design" value="glass" checked><span>신버전</span></label>
+            </fieldset>
+        </div>
         <div class="brand">
             <figure class="study-companion"><img src="./assets/study-blob.png" alt="민트색 책갈피를 단 연보라색 젤리 캐릭터" width="106"
                     height="72"></figure>

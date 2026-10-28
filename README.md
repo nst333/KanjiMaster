@@ -1,6 +1,6 @@
 # Kanji Research Workspace
 
-Feasibility prototype for Korean learners identifying Japanese kanji and comparing original reference pages, styled in a pastel study-notebook direction. A preview is deployed with GitHub Pages; production acceptance is still pending.
+Feasibility prototype for Korean learners identifying Japanese kanji and comparing original reference pages, with classic pastel and aurora glass designs. A preview is deployed with GitHub Pages; production acceptance is still pending.
 
 ## Run
 
@@ -19,6 +19,8 @@ npm run dev -- 4174
 - `/`: handwriting input, recognition candidates, word search, and independent reference toggles. Word input extracts distinct kanji in reading order (e.g. `接線` → `接`, `線`; `食べ物` → `食`, `物`; `日曜日` → `日`, `曜`) while preserving supplementary characters and variation selectors. Each kanji has its own collapsible result group; only the first opens initially. Closed groups load on first expansion, and collapsing keeps existing pages alive. The study reference is on by default. One reference uses a 30:70 handwriting/reading layout on desktop; both restore handwriting above two resizable panes per kanji. Source toggles, width and mobile tabs apply to all groups without resetting their expansion state.
 - `/benchmark.html`: browser worker timing against 60 explicitly geometric fixtures.
 - `/responsive.html`: layout testing at 1440, 1024, 768, and 390 CSS pixels inside an iframe. This is not mobile-device emulation.
+
+The header's **구버전 / 신버전** selector switches between the classic pastel design and the new aurora glass design. First visits use glass; the last selection is saved in `localStorage` under `kanjimaster.design`. The theme is applied before styles load. Switching changes only the document theme, preserving handwriting, results, open groups and existing iframe browsing contexts. If storage is unavailable, glass is the default and switching still works for the current page. External reference pages retain their original appearance.
 
 The vendor engine and its patterns are already included. Restore the exact pinned revision if necessary:
 
