@@ -27,7 +27,14 @@ function redraw() {
   const pixels = Math.round(size * ratio);
   if (canvas.width !== pixels || canvas.height !== pixels) canvas.width = canvas.height = pixels;
   ctx.setTransform(pixels / 256, 0, 0, pixels / 256, 0, 0);
-  ctx.clearRect(0, 0, 256, 256); ctx.strokeStyle = '#222'; ctx.lineWidth = 3; ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+  ctx.clearRect(0, 0, 256, 256);
+  // One canvas-aligned gradient keeps finished and active strokes consistent on every redraw.
+  const ink = ctx.createLinearGradient(0, 0, 256, 256);
+  ink.addColorStop(0, '#3676d8');
+  ink.addColorStop(0.45, '#8052c5');
+  ink.addColorStop(1, '#cf4f91');
+  ctx.strokeStyle = ink;
+  ctx.lineWidth = 3; ctx.lineCap = 'round'; ctx.lineJoin = 'round';
   for (const stroke of [...strokes, ...(active ? [active.points] : [])]) {
     if (!stroke.length) continue;
     ctx.beginPath(); ctx.moveTo(...stroke[0]);
