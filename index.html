@@ -19,24 +19,24 @@
             </div>
         </div>
         <form id="manual-form">
-            <label for="manual">한자 직접 입력</label>
-            <input id="manual" lang="ja" autocomplete="off" spellcheck="false" placeholder="예: 語"
+            <label for="manual">한자·단어 입력</label>
+            <input id="manual" lang="ja" autocomplete="off" spellcheck="false" placeholder="예: 接線, 食べ物"
                 aria-describedby="manual-error">
             <button class="primary-button" aria-label="선택한 사전에서 검색">검색</button>
             <p id="manual-error" role="alert"></p>
         </form>
-        <div class="selected-note"><span>선택한 한자</span><output id="selected" aria-label="선택한 한자" lang="ja">—</output>
+        <div class="selected-note"><span>검색한 한자</span><output id="selected" aria-label="검색한 한자" lang="ja">—</output>
         </div>
     </header>
     <main>
         <fieldset class="reference-toggles">
             <legend>사전 보기</legend>
             <label class="reference-toggle" for="show-nihongo">
-                <input type="checkbox" role="switch" id="show-nihongo" aria-controls="pane-nihongo" checked>
+                <input type="checkbox" role="switch" id="show-nihongo" aria-controls="reference-results" checked>
                 <span class="toggle-track" aria-hidden="true"></span><span>일본어 한자 공부방</span>
             </label>
             <label class="reference-toggle" for="show-naver">
-                <input type="checkbox" role="switch" id="show-naver" aria-controls="pane-naver">
+                <input type="checkbox" role="switch" id="show-naver" aria-controls="reference-results">
                 <span class="toggle-track" aria-hidden="true"></span><span>NAVER 일본어사전</span>
             </label>
         </fieldset>
@@ -70,37 +70,43 @@
             <p class="notice">원문이 보이지 않으면 ‘원문 열기’를 이용하세요.</p><button id="reset-split" hidden>너비 50:50 복원</button>
         </div>
         <div id="reference-tabs" class="mobile-tabs" role="tablist" aria-label="사전 선택" hidden><button role="tab" id="tab-nihongo"
-                aria-controls="pane-nihongo" aria-selected="true">일본어 한자 공부방</button><button role="tab" id="tab-naver"
-                aria-controls="pane-naver" aria-selected="false" tabindex="-1">NAVER</button></div>
-        <div id="comparison">
-            <section id="pane-nihongo" class="pane" aria-labelledby="title-nihongo">
-                <div class="pane-header">
-                    <h2 id="title-nihongo">일본어 한자 공부방</h2><a id="open-nihongo" target="_blank" rel="noopener noreferrer"
-                        hidden>원문
-                        열기 ↗</a><button id="reload-nihongo" disabled>새로고침</button>
-                </div>
-                <p id="status-nihongo" role="status">한자를 선택해 주세요.</p>
-                <div id="frame-nihongo" class="frame-slot"></div>
-            </section>
-            <div id="divider" role="separator" aria-label="사전 패널 너비" aria-orientation="vertical" aria-valuemin="25"
-                aria-valuemax="75" aria-valuenow="50" tabindex="0" hidden></div>
-            <section id="pane-naver" class="pane mobile-hidden" aria-labelledby="title-naver" hidden>
-                <div class="pane-header">
-                    <h2 id="title-naver">NAVER 일본어사전</h2><a id="open-naver" target="_blank" rel="noopener noreferrer"
-                        hidden>원문 열기
-                        ↗</a><button id="reload-naver" disabled>새로고침</button>
-                </div>
-                <p id="status-naver" role="status">한자를 선택해 주세요.</p>
-                <div id="frame-naver" class="frame-slot"></div>
-            </section>
+                aria-selected="true">일본어 한자 공부방</button><button role="tab" id="tab-naver"
+                aria-selected="false" tabindex="-1">NAVER</button></div>
+        <div id="reference-results"></div>
+        <div id="search-empty" class="reference-empty">
+            <p>한자나 단어를 입력해 주세요.</p>
+            <p>단어에 포함된 한자를 하나씩 찾아 보여드립니다.</p>
+        </div>
             <div id="reference-empty" class="reference-empty" hidden>
                 <p>보고 싶은 사전을 켜 주세요.</p>
                 <p>위의 토글을 켜면 선택한 한자의 원문이 열립니다.</p>
             </div>
-        </div>
         </section>
         </div>
     </main>
+    <template id="kanji-result-template">
+        <details class="kanji-result">
+            <summary><span class="result-character" lang="ja"></span><span class="result-summary-label">검색 결과</span></summary>
+            <div class="result-comparison">
+                <section class="pane" data-source="nihongo">
+                    <div class="pane-header">
+                        <h3>일본어 한자 공부방</h3><a target="_blank" rel="noopener noreferrer">원문 열기 ↗</a><button type="button">새로고침</button>
+                    </div>
+                    <p class="reference-status" role="status">펼치면 원문을 불러옵니다.</p>
+                    <div class="frame-slot"></div>
+                </section>
+                <div class="reference-divider" role="separator" aria-label="사전 패널 너비" aria-orientation="vertical"
+                    aria-valuemin="25" aria-valuemax="75" aria-valuenow="50" tabindex="0" hidden></div>
+                <section class="pane mobile-hidden" data-source="naver" hidden>
+                    <div class="pane-header">
+                        <h3>NAVER 일본어사전</h3><a target="_blank" rel="noopener noreferrer">원문 열기 ↗</a><button type="button">새로고침</button>
+                    </div>
+                    <p class="reference-status" role="status">펼치면 원문을 불러옵니다.</p>
+                    <div class="frame-slot"></div>
+                </section>
+            </div>
+        </details>
+    </template>
     <footer>
         <div class="credits">필기 인식 <a href="https://github.com/asdfjkl/kanjicanvas">Kanji Canvas</a> · <a
                 href="./vendor/kanjicanvas/LICENSE.TXT">라이선스</a><span>글꼴 <a

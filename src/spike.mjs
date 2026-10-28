@@ -1,4 +1,5 @@
-import { isSingleKanji, resolveReferences, validateStrokes } from './domain.mjs';
+import { isSingleKanji, extractKanji, validateStrokes } from './domain.mjs';
+import { createReferenceResults } from './reference-results.mjs';
 import { LatestRecognitionQueue } from './recognition-queue.mjs';
 const $ = id => document.getElementById(id);
 const canvas = $('drawing');
@@ -130,73 +131,24 @@ $('more-candidates').onclick = () => {
 };
 startEngine();
 
-const frameTimers = new Map();
-const loadedReferences = new Map();
-let selectedReferences = [];
-function loadReference(reference) {
-  const { source, url } = reference;
-  loadedReferences.set(source, url);
-  clearTimeout(frameTimers.get(source));
-  const slot = $(`frame-${source}`); const status = $(`status-${source}`); const link = $(`open-${source}`);
-  link.href = url; link.hidden = false; $(`reload-${source}`).disabled = false;
-  status.textContent = '원문 로딩 중…';
-  const frame = document.createElement('iframe'); frame.title = source === 'nihongo' ? '일본어 한자 공부방 원문' : 'NAVER 일본어사전 원문'; frame.src = url; frame.referrerPolicy = 'strict-origin-when-cross-origin';
-  frame.addEventListener('load', () => { clearTimeout(frameTimers.get(source)); status.textContent = '결과가 없거나 화면이 비어 있으면 원문 열기를 이용하세요.'; });
-  frame.addEventListener('error', () => { clearTimeout(frameTimers.get(source)); status.textContent = '원문을 불러오지 못했습니다. 원문 열기로 확인하세요.'; });
-  slot.replaceChildren(frame);
-  frameTimers.set(source, setTimeout(() => { status.textContent = '로딩이 지연되거나 표시가 제한될 수 있습니다. 원문 열기로 확인하세요.'; }, 12000));
-  $(`reload-${source}`).onclick = () => loadReference(reference);
-}
-function selectCharacter(character) {
-  const references = resolveReferences(character);
-  selectedReferences = references;
-  $('selected').textContent = character; $('manual').value = character; $('manual-error').textContent = '';
-  for (const button of $('candidates').children) button.setAttribute('aria-pressed', String(button.textContent === character));
-  for (const reference of references) {
-    if ($(`show-${reference.source}`).checked) loadReference(reference);
+const referenceResults = createReferenceResults();
+function selectCharacter(value) {
+  const characters = extractKanji(value);
+  if (!characters.length) throw new Error('한자나 한자가 포함된 단어를 입력해 주세요.');
+  referenceResults.show(characters);
+  $('selected').textContent = characters.join(' · ');
+  $('manual').value = value;
+  $('manual-error').textContent = '';
+  $('manual').removeAttribute('aria-invalid');
+  for (const button of $('candidates').children) {
+    button.setAttribute('aria-pressed', String(characters.length === 1 && button.textContent === characters[0]));
   }
 }
-$('manual-form').onsubmit = event => { event.preventDefault(); try { selectCharacter($('manual').value); $('manual').removeAttribute('aria-invalid'); } catch (error) { $('manual-error').textContent = error.message; $('manual').setAttribute('aria-invalid', 'true'); } };
-
-const divider = $('divider'), comparison = $('comparison');
-let resizePointer = null;
-let splitValue = 50;
-function setSplit(value) {
-  splitValue = Math.max(25, Math.min(75, value));
-  comparison.style.gridTemplateColumns = `minmax(0, ${splitValue}fr) 12px minmax(0, ${100-splitValue}fr)`;
-  divider.setAttribute('aria-valuenow', String(Math.round(splitValue)));
-}
-divider.onpointerdown = event => { resizePointer = event.pointerId; divider.setPointerCapture(event.pointerId); document.body.classList.add('resizing'); };
-divider.onpointermove = event => { if (resizePointer !== event.pointerId) return; const rect = comparison.getBoundingClientRect(); setSplit((event.clientX - rect.left) / rect.width * 100); };
-function endResize() { resizePointer = null; document.body.classList.remove('resizing'); }
-divider.onpointerup = endResize; divider.onpointercancel = endResize; divider.onlostpointercapture = endResize;
-divider.onkeydown = event => { const current = Number(divider.getAttribute('aria-valuenow')); const next = { ArrowLeft: current-5, ArrowRight: current+5, Home:25, End:75 }[event.key]; if (next !== undefined) { event.preventDefault(); setSplit(next); } };
-$('reset-split').onclick = () => setSplit(50);
-function activateTab(source, focus = false) {
-  for (const name of ['nihongo', 'naver']) { const tab = $(`tab-${name}`); tab.setAttribute('aria-selected', String(name === source)); tab.tabIndex = name === source ? 0 : -1; $(`pane-${name}`).classList.toggle('mobile-hidden', name !== source); }
-  if (focus) $(`tab-${source}`).focus();
-}
-for (const source of ['nihongo','naver']) { const tab = $(`tab-${source}`); tab.onclick = () => activateTab(source); tab.onkeydown = event => { if (['ArrowLeft','ArrowRight','Home','End'].includes(event.key)) { event.preventDefault(); activateTab(event.key === 'Home' ? 'nihongo' : event.key === 'End' ? 'naver' : source === 'nihongo' ? 'naver' : 'nihongo', true); } }; }
-
-function updateReferenceView() {
-  const sources = ['nihongo', 'naver'];
-  const enabled = sources.filter(source => $(`show-${source}`).checked);
-  const both = enabled.length === 2;
-  $('workspace').dataset.view = both ? 'both' : enabled.length ? 'single' : 'none';
-  for (const source of sources) $(`pane-${source}`).hidden = !enabled.includes(source);
-  divider.hidden = $('reset-split').hidden = $('reference-tabs').hidden = !both;
-  $('reference-empty').hidden = enabled.length !== 0;
-  endResize();
-  if (both) setSplit(splitValue);
-  else comparison.style.removeProperty('grid-template-columns');
-  const activeSource = enabled.find(source => $(`tab-${source}`).getAttribute('aria-selected') === 'true') || enabled[0];
-  if (activeSource) activateTab(activeSource);
-  for (const reference of selectedReferences) {
-    if (enabled.includes(reference.source) && loadedReferences.get(reference.source) !== reference.url) loadReference(reference);
-  }
-}
-for (const source of ['nihongo', 'naver']) $(`show-${source}`).onchange = updateReferenceView;
-updateReferenceView();
+$('manual-form').onsubmit = event => {
+  event.preventDefault();
+  try { selectCharacter($('manual').value); }
+  catch (error) { $('manual-error').textContent = error.message; $('manual').setAttribute('aria-invalid', 'true'); }
+};
 
 $('save-sample').onclick = () => {
   try {

@@ -1,8 +1,29 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { isSingleKanji, resolveReferences, recognizeWithEngine, validateStrokes } from '../src/domain.mjs';
+import { isSingleKanji, extractKanji, resolveReferences, recognizeWithEngine, validateStrokes } from '../src/domain.mjs';
 import { loadEngine } from '../scripts/load-engine.mjs';
 import { geometricSamples } from '../fixtures/geometric-samples.mjs';
+
+test('extracts word kanji in order, ignoring kana and repeated characters',()=>{
+  assert.deepEqual(extractKanji('接線'), ['接', '線']);
+  assert.deepEqual(extractKanji('食べ物'), ['食', '物']);
+  assert.deepEqual(extractKanji('日曜日'), ['日', '曜']);
+  assert.deepEqual(extractKanji('  カナ 接\n線 123 接!'), ['接', '線']);
+  assert.deepEqual(extractKanji('語'), ['語']);
+});
+
+test('extraction preserves supplementary kanji and attached variation selectors',()=>{
+  const characters = ['𠮷', '邊\u{E0100}', '邊\uFE00', '邊', '學'];
+  assert.deepEqual(extractKanji(characters.join('かな') + characters.join('')), characters);
+  for (const character of extractKanji(characters.join(''))) {
+    assert.equal(isSingleKanji(character), true);
+    assert.equal(resolveReferences(character)[0].character, character);
+  }
+});
+
+test('input without kanji yields no results',()=>{
+  for (const value of ['', ' ', 'かなカナ', 'abc123', '<script>😀', '\u{E0100}', null]) assert.deepEqual(extractKanji(value), []);
+});
 
 test('preserves traditional, supplementary and variation-selector code points',()=>{
   for (const character of ['日','学','學','𠮷','邊\u{E0100}']) {

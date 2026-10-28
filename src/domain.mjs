@@ -3,6 +3,12 @@ export function isSingleKanji(value) {
   return typeof value === 'string' && /^\p{Unified_Ideograph}[\uFE00-\uFE0F\u{E0100}-\u{E01EF}]?$/u.test(value);
 }
 
+/** Extract distinct kanji in reading order without normalizing their code points. */
+export function extractKanji(value) {
+  if (typeof value !== 'string') return [];
+  return [...new Set(value.match(/\p{Unified_Ideograph}[\uFE00-\uFE0F\u{E0100}-\u{E01EF}]?/gu) || [])];
+}
+
 export function resolveReferences(character) {
   if (!isSingleKanji(character)) throw new Error('한자 한 글자를 입력해 주세요.');
   const encoded = encodeURIComponent(character);

@@ -1,6 +1,6 @@
 # Kanji Research Workspace
 
-Local feasibility prototype for Korean learners identifying Japanese kanji and comparing original reference pages, now styled in the user's requested pastel study-notebook direction. Production acceptance is still pending. Nothing has been deployed.
+Feasibility prototype for Korean learners identifying Japanese kanji and comparing original reference pages, styled in a pastel study-notebook direction. A preview is deployed with GitHub Pages; production acceptance is still pending.
 
 ## Run
 
@@ -16,7 +16,7 @@ Open http://127.0.0.1:4173/. To use a different port:
 npm run dev -- 4174
 ```
 
-- `/`: handwriting input, recognition candidates, exact-character search, and independent reference toggles. The study reference is on by default. One reference uses a 30:70 handwriting/reading layout on desktop; both references restore handwriting above two resizable panes. Mobile uses a vertical layout with tabs when both references are on. References load the selected character when enabled.
+- `/`: handwriting input, recognition candidates, word search, and independent reference toggles. Word input extracts distinct kanji in reading order (e.g. `接線` → `接`, `線`; `食べ物` → `食`, `物`; `日曜日` → `日`, `曜`) while preserving supplementary characters and variation selectors. Each kanji has its own collapsible result group; only the first opens initially. Closed groups load on first expansion, and collapsing keeps existing pages alive. The study reference is on by default. One reference uses a 30:70 handwriting/reading layout on desktop; both restore handwriting above two resizable panes per kanji. Source toggles, width and mobile tabs apply to all groups without resetting their expansion state.
 - `/benchmark.html`: browser worker timing against 60 explicitly geometric fixtures.
 - `/responsive.html`: layout testing at 1440, 1024, 768, and 390 CSS pixels inside an iframe. This is not mobile-device emulation.
 
