@@ -7,8 +7,10 @@
     <title>KanjiMaster · 한자 찾기</title>
     <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg?v=1">
     <script src="./src/design-switch.js?v=glass-v1"></script>
+    <script src="./src/color-mode.js?v=1"></script>
     <link rel="stylesheet" href="./src/spike.css?v=readability-v3">
     <link rel="stylesheet" href="./src/glass.css?v=readability-v3">
+    <link rel="stylesheet" href="./src/dark.css?v=1">
 </head>
 
 <body>
@@ -22,7 +24,14 @@
             <details id="ink-settings" class="ink-settings">
                 <summary><svg class="action-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="./assets/icons.svg#settings"></use></svg>설정</summary>
                 <div class="ink-settings-panel">
-                    <h2>필기 설정</h2>
+                    <h2>화면 설정</h2>
+                    <label class="color-mode-label" for="color-mode">화면 모드</label>
+                    <select id="color-mode">
+                        <option value="system">기기 설정에 맞춤</option>
+                        <option value="light">라이트 모드</option>
+                        <option value="dark">다크 모드</option>
+                    </select>
+                    <h2 class="ink-section-heading">필기 설정</h2>
                     <label class="reference-toggle" for="laser-effect">
                         <input type="checkbox" role="switch" id="laser-effect" aria-controls="drawing" checked>
                         <span class="toggle-track" aria-hidden="true"></span><span>레이저 효과</span>

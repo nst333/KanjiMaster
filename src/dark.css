@@ -1,0 +1,116 @@
+/* Appearance is independent of the classic / glass layout selection. */
+:root[data-color-mode="light"] { color-scheme: light; }
+
+.color-mode-label { display: block; margin: 12px 0 8px; }
+#color-mode {
+  width: 100%;
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  font: inherit;
+  font-size: 14px;
+  color: var(--ink);
+  background: var(--surface);
+}
+.ink-settings-panel .ink-section-heading { margin-top: 20px; }
+
+:root[data-color-mode="dark"] {
+  color-scheme: dark;
+  --ink: #e2ece5;
+  --muted: #b1c2b6;
+  --rule: #3d5347;
+  --mint: #2a4638;
+  --lavender: #433958;
+  --surface: #19271f;
+  --panel: #203228;
+  --border: #536c5c;
+  background: #101b15;
+  color: var(--ink);
+}
+:root[data-design="glass"][data-color-mode="dark"] {
+  --ink: #e8e8f6;
+  --muted: #b8bfd8;
+  --rule: #3d4464;
+  --mint: #303c62;
+  --lavender: #433859;
+  --surface: #1c2136;
+  --panel: #21283f;
+  --border: #535e83;
+  --glass-surface: rgb(28 33 54 / .92);
+  background-color: #121627;
+  background-image: linear-gradient(135deg, #19243b, #191b2e 60%, #261e30);
+}
+:root[data-color-mode="dark"] .site-header { border-bottom-color: var(--rule); }
+:root[data-color-mode="dark"] :is(.brand h1, #manual, .reference-toggle, #input-panel > summary, .candidate-section h2) { color: var(--ink); }
+:root[data-color-mode="dark"] :is(.app-name, #manual-form label, .selected-note > span, .reference-toggles legend, .summary-hint, #recognition-status, .result-summary-label, footer) { color: var(--muted); }
+:root[data-color-mode="dark"] :is(.design-switch, .ink-settings > summary, .ink-settings-panel) {
+  color: var(--ink);
+  border-color: var(--border);
+  background: var(--surface);
+  box-shadow: none;
+}
+:root[data-color-mode="dark"] .design-switch span { color: var(--muted); }
+:root[data-color-mode="dark"] .design-switch input:checked + span {
+  background: var(--mint);
+  color: var(--ink);
+  box-shadow: none;
+}
+:root[data-color-mode="dark"] .ink-settings[open] > summary { background: var(--mint); border-color: var(--border); }
+:root[data-color-mode="dark"] input {
+  background: var(--surface);
+  border-color: var(--border);
+  color: var(--ink);
+  box-shadow: none;
+}
+:root[data-color-mode="dark"] input::placeholder { color: var(--muted); }
+:root[data-color-mode="dark"] button,
+:root[data-color-mode="dark"] #more-candidates,
+:root[data-color-mode="dark"] #candidates button {
+  background: var(--surface);
+  border-color: var(--border);
+  color: var(--ink);
+  box-shadow: none;
+}
+:root[data-color-mode="dark"] button:hover:enabled { background: var(--mint); border-color: var(--muted); }
+:root[data-color-mode="dark"] button:disabled { background: var(--panel); color: #88988e; border-color: var(--rule); }
+:root[data-design="glass"][data-color-mode="dark"] button:disabled { color: #929bb8; }
+:root[data-color-mode="dark"] button.primary-button { background: #365c48; border-color: #638d73; color: #fff; }
+:root[data-color-mode="dark"] button.primary-button:hover:enabled { background: #436f58; }
+:root[data-design="glass"][data-color-mode="dark"] button.primary-button { background: #6554a7; border-color: #9b8bcb; }
+:root[data-design="glass"][data-color-mode="dark"] button.primary-button:hover:enabled { background: #7563b7; }
+:root[data-color-mode="dark"] #selected { background: var(--lavender); color: var(--ink); border-color: var(--border); box-shadow: none; }
+:root[data-color-mode="dark"] :is(#input-panel, .kanji-result) { border-color: var(--border); box-shadow: none; }
+:root[data-color-mode="dark"] canvas {
+  background-color: #121c24;
+  border-color: var(--border);
+  background-image: linear-gradient(90deg, transparent 49.7%, #384452 49.7%, #384452 50.1%, transparent 50.1%),
+    linear-gradient(transparent 49.7%, #384452 49.7%, #384452 50.1%, transparent 50.1%);
+  box-shadow: none;
+}
+:root[data-color-mode="dark"] :is(#candidates:empty::before, .frame-slot:empty::before) { color: var(--muted); }
+:root[data-color-mode="dark"] #candidates button[aria-pressed="true"] { background: var(--lavender); border-color: var(--muted); box-shadow: inset 0 0 0 1px var(--muted); }
+:root[data-color-mode="dark"] .kanji-result > summary { background: var(--mint); color: var(--ink); }
+:root[data-color-mode="dark"] .kanji-result[open] > summary { border-bottom-color: var(--border); }
+:root[data-color-mode="dark"] :is(.pane, .pane-header, .pane > p) { background: var(--surface); color: var(--muted); border-bottom-color: var(--rule); }
+:root[data-color-mode="dark"] .reference-empty { background: var(--surface); color: var(--ink); border-color: var(--border); }
+:root[data-color-mode="dark"] a { color: #a7d1b6; }
+:root[data-design="glass"][data-color-mode="dark"] a { color: #c3b8ff; }
+:root[data-color-mode="dark"] :is(.pane-header button, #reset-split, .mobile-tabs button) { background: transparent; }
+:root[data-color-mode="dark"] .mobile-tabs button[aria-selected="true"] { background: var(--mint); color: var(--ink); border-bottom-color: var(--muted); }
+:root[data-color-mode="dark"] .toggle-track { background: var(--rule); border-color: var(--border); }
+:root[data-color-mode="dark"] .reference-toggle input:checked + .toggle-track { background: #669a7c; border-color: #83b496; }
+:root[data-design="glass"][data-color-mode="dark"] .reference-toggle input:checked + .toggle-track { background: #8874c5; border-color: #a393d8; }
+:root[data-color-mode="dark"] .reference-divider { background: var(--panel); }
+:root[data-color-mode="dark"] .reference-divider::after { background: var(--muted); }
+:root[data-color-mode="dark"] :is(:focus-visible, .design-switch input:focus-visible + span, .reference-toggle input:focus-visible + .toggle-track) { outline-color: #b5c7ff; }
+:root[data-color-mode="dark"] summary::marker { color: var(--muted); }
+:root[data-color-mode="dark"] #manual-error { color: #ffb4a5; }
+:root[data-color-mode="dark"] ::selection { background: #62558b; color: #fff; }
+
+:root[data-color-mode="dark"] #candidates button:hover:enabled,
+:root[data-color-mode="dark"] #more-candidates:hover:enabled { background: var(--mint); border-color: var(--muted); }
+
+:root[data-color-mode="dark"] #manual,
+:root[data-color-mode="dark"] button.primary-button,
+:root[data-color-mode="dark"] button.primary-button:hover:enabled { box-shadow: none; }

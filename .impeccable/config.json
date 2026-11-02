@@ -11,6 +11,15 @@
         ],
         "createdAt": "2026-11-02T11:02:15.047Z",
         "reason": "Verified rendered desktop both-source mode has 24px right padding; single-source and mobile modes remove the border. Static cascade detection mixes these states."
+      },
+      {
+        "rule": "dark-glow",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-11-02T18:38:24.103Z",
+        "reason": "Verified dark-mode input, primary button, handwriting panel and result panel all compute box-shadow:none. Detector attributes the unchanged light glass shadow to the dark root."
       }
     ]
   }
