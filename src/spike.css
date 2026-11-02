@@ -107,7 +107,7 @@ body {
   min-height: 36px;
   padding: 0 14px;
   border-radius: 999px;
-  font-size: 11px;
+  font-size: 12px;
   color: var(--muted);
 }
 
@@ -138,7 +138,7 @@ body {
   border-radius: 999px;
   background: var(--surface);
   color: var(--ink);
-  font-size: 11px;
+  font-size: 12px;
 }
 
 .ink-settings > summary::-webkit-details-marker {
@@ -168,7 +168,7 @@ body {
 
 .ink-settings-panel p {
   margin-top: 4px;
-  font-size: 11px;
+  font-size: 12px;
 }
 
 button,
@@ -224,7 +224,7 @@ input {
 }
 
 input::placeholder {
-  color: #768273;
+  color: #5b6e60;
   font-size: 14px;
 }
 
@@ -283,7 +283,7 @@ a {
 }
 
 .app-name {
-  font-size: 11px;
+  font-size: 12px;
   margin-top: 4px;
 }
 
@@ -336,7 +336,7 @@ a {
 }
 
 .selected-note>span {
-  font-size: 11px;
+  font-size: 12px;
   color: var(--muted);
   flex-shrink: 0;
 }
@@ -457,12 +457,12 @@ summary {
 }
 
 summary::marker {
-  font-size: 10px;
+  font-size: 12px;
   color: #5c705b;
 }
 
 .summary-hint {
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 400;
   color: var(--muted);
   margin-left: 18px;
@@ -477,7 +477,7 @@ summary::marker {
 
 .drawing-section {
   border-right: 1px solid var(--rule);
-  padding-right: 24px;
+  padding: 0 24px 0 0;
 }
 
 canvas {
@@ -511,7 +511,7 @@ canvas {
 }
 
 .drawing-caption p {
-  font-size: 10px;
+  font-size: 12px;
 }
 
 #stroke-count {
@@ -586,7 +586,7 @@ canvas {
   margin-top: 10px;
 }
 
-.candidate-count { font-size: 11px; color: var(--muted); }
+.candidate-count { font-size: 12px; color: var(--muted); }
 
 #more-candidates {
   min-height: 44px;
@@ -608,14 +608,14 @@ canvas {
 }
 
 .notice {
-  font-size: 11px;
+  font-size: 12px;
 }
 
 #reset-split {
   border: 0;
   min-height: 30px;
   padding: 4px 0;
-  font-size: 11px;
+  font-size: 12px;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
@@ -680,12 +680,12 @@ canvas {
   align-items: center;
   gap: 8px 12px;
   flex-wrap: wrap;
-  padding: 6px 16px;
+  padding: 8px 16px;
   border-bottom: 1px solid #dce5dc;
 }
 
 .reference-source-label {
-  font-size: 10px;
+  font-size: 12px;
   color: var(--muted);
 }
 
@@ -699,22 +699,22 @@ canvas {
 }
 
 .pane-header a {
-  font-size: 11px;
+  font-size: 12px;
 }
 
 .pane-header button {
   padding: 4px 0;
   min-height: 30px;
   border: 0;
-  font-size: 11px;
+  font-size: 12px;
   background: transparent;
 }
 
 .pane>p {
   margin: 0;
-  padding: 6px 12px;
+  padding: 8px 12px;
   min-height: 29px;
-  font-size: 10px;
+  font-size: 12px;
   border-bottom: 1px solid #edf0e9;
 }
 
@@ -855,7 +855,7 @@ footer {
 }
 
 .credits {
-  font-size: 10px;
+  font-size: 12px;
   line-height: 1.8;
 }
 
@@ -868,7 +868,7 @@ footer {
 }
 
 .sample-tools summary {
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 400;
   text-align: right;
 }
@@ -897,7 +897,7 @@ footer {
 
   #manual-form label {
     grid-column: 1 / -1;
-    font-size: 10px;
+    font-size: 12px;
   }
 
   #manual {
@@ -967,7 +967,7 @@ footer {
 
   #manual-form label {
     grid-column: auto;
-    font-size: 11px;
+    font-size: 12px;
   }
 
   main {
@@ -986,7 +986,7 @@ footer {
   }
 
   .reference-toggle {
-    font-size: 11px;
+    font-size: 12px;
     gap: 7px;
   }
 
@@ -1065,7 +1065,7 @@ footer {
 
   .mobile-tabs button {
     flex: 1;
-    font-size: 11px;
+    font-size: 12px;
     border: 0;
     border-radius: 0;
     background: transparent;

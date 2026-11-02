@@ -32,10 +32,17 @@ jobs:
         run: npm test
       - name: Setup Pages
         uses: actions/configure-pages@v5
+      - name: Prepare static site
+        run: |
+          mkdir -p _site
+          cp index.html benchmark.html responsive.html _site/
+          cp -R src assets vendor fixtures _site/
+          test -s _site/assets/favicon.svg
+          test -s _site/assets/icons.svg
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
+          path: '_site'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5

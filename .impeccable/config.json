@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-11-02T11:02:15.047Z",
+        "reason": "Verified rendered desktop both-source mode has 24px right padding; single-source and mobile modes remove the border. Static cascade detection mixes these states."
+      }
+    ]
+  }
+}

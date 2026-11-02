@@ -124,7 +124,7 @@
 :root[data-design="glass"] #manual-form label {
   grid-column: 1 / -1;
   margin: 0 0 0 3px;
-  font-size: 11px;
+  font-size: 12px;
   color: #4c5575;
 }
 
@@ -198,7 +198,7 @@
 
 :root[data-design="glass"] .selected-note > span {
   display: block;
-  font-size: 10px;
+  font-size: 12px;
   color: #4c5575;
 }
 
@@ -226,7 +226,7 @@
 }
 
 :root[data-design="glass"] .reference-toggles legend {
-  font-size: 11px;
+  font-size: 12px;
   color: #4c5575;
 }
 
@@ -272,7 +272,7 @@
 }
 
 :root[data-design="glass"] .summary-hint {
-  font-size: 10px;
+  font-size: 12px;
   color: #59627f;
 }
 
@@ -290,7 +290,7 @@
 }
 
 :root[data-design="glass"] .controls button {
-  font-size: 11px;
+  font-size: 12px;
 }
 
 :root[data-design="glass"] .candidate-section h2 {
@@ -299,7 +299,7 @@
 }
 
 :root[data-design="glass"] #recognition-status {
-  font-size: 11px;
+  font-size: 12px;
   color: #5c6583;
 }
 
@@ -355,7 +355,7 @@
 
 :root[data-design="glass"] .result-summary-label {
   margin-left: 16px;
-  font-size: 11px;
+  font-size: 12px;
   color: #646685;
 }
 
@@ -457,7 +457,7 @@
   :root[data-design="glass"] .brand h1 { font-size: 22px; }
   :root[data-design="glass"] .study-companion { width: 48px; margin-left: -8px; }
   :root[data-design="glass"] .study-companion img { width: 62px; height: 54px; }
-  :root[data-design="glass"] .app-name { margin-top: 5px; font-size: 10px; }
+  :root[data-design="glass"] .app-name { margin-top: 5px; font-size: 12px; }
   :root[data-design="glass"] .selected-note > span { display: none; }
   :root[data-design="glass"] #selected { font-size: 27px; padding: 7px 11px; }
   :root[data-design="glass"] #manual { min-height: 48px; font-size: 18px; }
@@ -465,7 +465,7 @@
   :root[data-design="glass"] main,
   :root[data-design="glass"] footer { padding-left: 18px; padding-right: 18px; }
   :root[data-design="glass"] .reference-toggles { gap: 0 16px; margin: 12px 0 16px; }
-  :root[data-design="glass"] .reference-toggle { font-size: 11px; }
+  :root[data-design="glass"] .reference-toggle { font-size: 12px; }
   :root[data-design="glass"] #input-panel { padding-left: 16px; padding-right: 16px; }
   :root[data-design="glass"] #input-panel,
   :root[data-design="glass"] .kanji-result { box-shadow: 0 8px 24px rgb(74 65 130 / .08), inset 0 1px 0 white; }
