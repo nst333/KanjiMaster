@@ -19,24 +19,28 @@
   color-scheme: dark;
   --ink: #e2ece5;
   --muted: #b1c2b6;
-  --rule: #3d5347;
+  --rule: #2e4035;
   --mint: #2a4638;
   --lavender: #433958;
   --surface: #19271f;
   --panel: #203228;
-  --border: #536c5c;
+  --border: #33483b;
+  --control-border: #62836e;
+  --control-hover: #86a692;
   background: #101b15;
   color: var(--ink);
 }
 :root[data-design="glass"][data-color-mode="dark"] {
   --ink: #e8e8f6;
   --muted: #b8bfd8;
-  --rule: #3d4464;
+  --rule: #2d3549;
   --mint: #303c62;
   --lavender: #433859;
   --surface: #1c2136;
   --panel: #21283f;
-  --border: #535e83;
+  --border: #364057;
+  --control-border: #687699;
+  --control-hover: #8998ba;
   --glass-surface: rgb(28 33 54 / .92);
   background-color: #151925;
   background-image: linear-gradient(160deg, #202638 0%, #191e2c 48%, #121720 100%);
@@ -59,7 +63,7 @@
 :root[data-color-mode="dark"] .ink-settings[open] > summary { background: var(--mint); border-color: var(--border); }
 :root[data-color-mode="dark"] input {
   background: var(--surface);
-  border-color: var(--border);
+  border-color: var(--control-border);
   color: var(--ink);
   box-shadow: none;
 }
@@ -68,11 +72,11 @@
 :root[data-color-mode="dark"] #more-candidates,
 :root[data-color-mode="dark"] #candidates button {
   background: var(--surface);
-  border-color: var(--border);
+  border-color: var(--control-border);
   color: var(--ink);
   box-shadow: none;
 }
-:root[data-color-mode="dark"] button:hover:enabled { background: var(--mint); border-color: var(--muted); }
+:root[data-color-mode="dark"] button:hover:enabled { background: var(--mint); border-color: var(--control-hover); }
 :root[data-color-mode="dark"] button:disabled { background: var(--panel); color: #88988e; border-color: var(--rule); }
 :root[data-design="glass"][data-color-mode="dark"] button:disabled { color: #929bb8; }
 :root[data-color-mode="dark"] button.primary-button { background: #365c48; border-color: #638d73; color: #fff; }
@@ -114,3 +118,8 @@
 :root[data-color-mode="dark"] #manual,
 :root[data-color-mode="dark"] button.primary-button,
 :root[data-color-mode="dark"] button.primary-button:hover:enabled { box-shadow: none; }
+
+/* Controls stay identifiable; surrounding panel rules recede into the surface. */
+:root[data-color-mode="dark"] #color-mode { border-color: var(--control-border); }
+:root[data-color-mode="dark"] #candidates button:hover:enabled,
+:root[data-color-mode="dark"] #more-candidates:hover:enabled { border-color: var(--control-hover); }
