@@ -1,0 +1,49 @@
+/* A quiet default: effects only start after the capability policy has resolved. */
+.effects-preferences { border: 0; padding: 0; margin: 18px 0 0; min-width: 0; }
+.effects-preferences legend { padding: 0; margin-bottom: 8px; font-size: 14px; font-weight: 700; }
+.effects-options { display: flex; gap: 4px; }
+.effects-options label { flex: 1; min-width: 0; position: relative; cursor: pointer; }
+.effects-options input { position: absolute; width: 1px; height: 1px; min-height: 0; padding: 0; margin: 0; opacity: 0; }
+.effects-options span {
+  display: flex; align-items: center; justify-content: center;
+  min-height: 44px; padding: 8px;
+  border: 1px solid var(--control-border, var(--border)); border-radius: 8px;
+  background: var(--surface); color: var(--muted); font-size: 13px;
+}
+.effects-options input:checked + span { background: var(--mint); color: var(--ink); border-color: var(--muted); font-weight: 700; }
+.effects-options input:focus-visible + span { outline: 2px solid var(--ink); outline-offset: 2px; }
+#effects-status { margin-top: 10px; font-size: 12px; }
+.ink-settings-panel { max-height: min(72dvh, 600px); overflow-y: auto; overscroll-behavior: contain; }
+
+:root[data-effects="full"] { --motion-ease: cubic-bezier(0.16, 1, 0.3, 1); }
+:root[data-effects="full"] button {
+  position: relative; overflow: hidden;
+  transition: transform 180ms var(--motion-ease), background-color 160ms ease, border-color 160ms ease, color 160ms ease;
+}
+.interaction-ink { position: absolute; border-radius: 50%; pointer-events: none; background: currentColor; opacity: 0; }
+:root:not([data-effects="full"]) .interaction-ink { display: none; }
+:root[data-effects="full"] :is(input, textarea, select, .effects-options span, .design-switch span) { transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease; }
+:root[data-effects="full"] .toggle-track::after { transition: transform 220ms var(--motion-ease); }
+:root[data-effects="full"] .study-companion img {
+  transform: translate(calc(var(--look-x, 0) * 4px), calc(var(--look-y, 0) * 2px)) rotate(calc(var(--look-x, 0) * 7deg));
+  transition: transform 220ms var(--motion-ease);
+}
+:root[data-effects="full"] button:active:enabled { transform: translateY(1px) scale(.96); }
+:root[data-effects="full"] #candidates button:active:enabled { transform: scale(.92); }
+:root[data-effects="full"] #manual:focus { border-color: var(--ink); }
+:root[data-effects="full"] #drawing:focus-visible { outline-offset: 4px; }
+@media (hover: hover) and (pointer: fine) {
+  :root[data-effects="full"] button:hover:enabled { transform: translateY(-2px); }
+  :root[data-effects="full"] #candidates button:hover:enabled { transform: translateY(-4px) rotate(-2deg); }
+  :root[data-effects="full"] button:active:enabled { transform: translateY(1px) scale(.96); }
+  :root[data-effects="full"] #candidates button:active:enabled { transform: scale(.92); }
+}
+
+/* Gentle preserves state feedback with color and short opacity-only WAAPI changes. */
+:root[data-effects="gentle"] button,
+:root[data-effects="gentle"] .design-switch span { transition: background-color 120ms ease, color 120ms ease, border-color 120ms ease; }
+:root[data-effects="gentle"] button:active { transform: none; }
+:root[data-effects="off"] button,
+:root[data-effects="off"] .design-switch span,
+:root[data-effects="off"] .toggle-track::after { transition: none; }
+:root[data-effects="off"] button:active { transform: none; }
