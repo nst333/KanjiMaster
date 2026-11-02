@@ -2,6 +2,7 @@ import { isSingleKanji, extractKanji, validateStrokes } from './domain.mjs';
 import { createReferenceResults } from './reference-results.mjs';
 import { createInkSettings } from './ink-settings.mjs';
 import { LatestRecognitionQueue } from './recognition-queue.mjs';
+import { createNotebook } from './notebook.mjs';
 const $ = id => document.getElementById(id);
 const canvas = $('drawing');
 const ctx = canvas.getContext('2d');
@@ -161,12 +162,14 @@ $('more-candidates').onclick = () => {
 startEngine();
 
 const referenceResults = createReferenceResults();
+const notebook = createNotebook(selectCharacter);
 function selectCharacter(value) {
   const characters = extractKanji(value);
   if (!characters.length) throw new Error('한자나 한자가 포함된 단어를 입력해 주세요.');
   referenceResults.show(characters);
   $('selected').textContent = characters.join(' · ');
   $('manual').value = value;
+  notebook.select(value);
   $('manual-error').textContent = '';
   $('manual').removeAttribute('aria-invalid');
   for (const button of $('candidates').children) {

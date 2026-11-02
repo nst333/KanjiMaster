@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./src/spike.css?v=readability-v3">
     <link rel="stylesheet" href="./src/glass.css?v=readability-v3">
     <link rel="stylesheet" href="./src/dark.css?v=3">
+    <link rel="stylesheet" href="./src/notebook.css?v=1">
 </head>
 
 <body>
@@ -70,6 +71,26 @@
                 <span class="toggle-track" aria-hidden="true"></span><span>NAVER 일본어사전</span>
             </label>
         </fieldset>
+        <section class="notebook" aria-label="학습 단어장">
+            <div class="notebook-toolbar">
+                <button id="notebook-toggle" type="button" aria-expanded="false" aria-controls="notebook-panel">학습 단어장 · 0개</button>
+                <button id="save-word" type="button" disabled>단어장에 저장</button>
+            </div>
+            <div id="notebook-panel" hidden>
+                <div class="notebook-heading"><h2>학습 단어장</h2><button id="start-review" type="button" disabled>메모로 복습</button></div>
+                <p id="review-hint">메모를 보고 단어를 떠올려 보세요.</p>
+                <p class="notebook-local">이 브라우저에 저장됩니다. 단어를 누르면 사전에서 다시 찾습니다.</p>
+                <form id="note-editor" hidden>
+                    <label for="note-text"><span id="note-term" lang="ja"></span> 읽는 법·뜻 메모</label>
+                    <textarea id="note-text" rows="2" maxlength="500" placeholder="예: たべもの · 음식" aria-describedby="note-help"></textarea>
+                    <p id="note-help">복습할 때 이 메모가 힌트로 나옵니다. 500자까지 적을 수 있어요.</p>
+                    <div class="notebook-editor-actions"><button type="submit">메모 저장</button><button id="cancel-note" type="button">취소</button></div>
+                </form>
+                <p id="notebook-empty">한자나 단어를 검색한 뒤 ‘단어장에 저장’을 눌러 보세요.</p>
+                <ul id="notebook-list" aria-label="저장한 단어"></ul>
+            </div>
+            <div class="notebook-feedback"><p id="notebook-status" role="status"></p><button id="undo-notebook-delete" type="button" hidden>삭제 취소</button></div>
+        </section>
         <div id="workspace" data-view="single">
         <details open id="input-panel">
             <summary>필기 입력<span class="summary-hint">획마다 자동 인식</span></summary>
@@ -151,7 +172,20 @@
             <p id="sample-status" role="status">수집된 샘플 0개</p>
         </details>
     </footer>
-    <script type="module" src="./src/spike.mjs?v=laser-ink-v1"></script>
+    <dialog id="review-dialog" aria-labelledby="review-title" aria-describedby="review-progress">
+        <div class="notebook-heading"><h2 id="review-title">메모로 복습</h2><button id="close-review" type="button">복습 닫기</button></div>
+        <p id="review-progress" aria-live="polite"></p>
+        <div id="review-question">
+            <p class="review-prompt">이 메모에 맞는 한자·단어를 떠올려 보세요.</p>
+            <p id="review-note"></p>
+            <div id="review-answer" hidden><p>저장한 단어</p><p id="review-term" lang="ja"></p></div>
+        </div>
+        <button id="reveal-answer" type="button">정답 보기</button>
+        <div id="review-ratings" hidden><button id="review-again" type="button">한 번 더</button><button id="review-remembered" type="button">기억나요</button></div>
+        <p id="review-done" hidden>이번 복습을 마쳤어요. 기억이 나지 않았던 단어는 다음에도 다시 살펴보세요.</p>
+        <p id="review-error" role="alert"></p>
+    </dialog>
+    <script type="module" src="./src/spike.mjs?v=notebook-v1"></script>
 </body>
 
 </html>

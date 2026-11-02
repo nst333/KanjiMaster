@@ -20,6 +20,15 @@
         ],
         "createdAt": "2026-11-02T18:38:24.103Z",
         "reason": "Verified dark-mode input, primary button, handwriting panel and result panel all compute box-shadow:none. Detector attributes the unchanged light glass shadow to the dark root."
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-11-02T18:41:16.212Z",
+        "reason": "Existing user-selected ivory pastel study-notebook palette documented in docs/pastel-style.md and preserved during dark-mode work. This rule has no extractable color value, so the exception is scoped to index.html."
       }
     ]
   }

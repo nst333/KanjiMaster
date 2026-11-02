@@ -1,0 +1,60 @@
+/* Saved searches form a ruled study list within the existing workspace. */
+.notebook { margin: 0 0 20px; min-width: 0; }
+.notebook-toolbar, .notebook-heading, .notebook-editor-actions, .notebook-row-actions, .notebook-feedback, #review-ratings {
+  display: flex; align-items: center; flex-wrap: wrap; gap: 8px 12px;
+}
+.notebook-heading { justify-content: space-between; margin-bottom: 8px; }
+.notebook h2, #review-title { font-size: 16px; }
+#notebook-panel {
+  margin-top: 12px; padding: 20px;
+  border: 1px solid var(--border); border-radius: 12px;
+  color: var(--ink); background: var(--surface);
+}
+.notebook p { font-size: 14px; }
+.notebook-local { margin: 4px 0 16px; }
+#notebook-status:empty { display: none; }
+.notebook-feedback:not(:has(#notebook-status:empty)) { margin-top: 10px; }
+#notebook-list { list-style: none; margin: 0; padding: 0; max-height: 320px; overflow-y: auto; scrollbar-width: thin; }
+#notebook-list li { display: flex; align-items: center; justify-content: space-between; gap: 12px 20px; padding: 12px 0; border-top: 1px solid var(--rule); }
+.notebook-entry { min-width: 0; }
+.notebook-entry p { white-space: pre-wrap; overflow-wrap: anywhere; }
+.notebook .notebook-entry .notebook-word {
+  padding: 4px 8px; margin: 0 0 4px; min-height: 44px;
+  background: transparent; border-color: transparent; color: var(--ink);
+  text-align: left; font-size: 24px; font-weight: 400; overflow-wrap: anywhere;
+}
+.notebook-row-actions { flex-shrink: 0; }
+#note-editor { padding: 16px 0; margin: 16px 0; border-block: 1px solid var(--rule); }
+#note-editor label { display: block; margin-bottom: 8px; font-size: 14px; }
+#note-term { font-size: 20px; overflow-wrap: anywhere; }
+#note-text {
+  display: block; width: 100%; resize: vertical; min-height: 84px; max-height: 300px;
+  padding: 12px; font: inherit; font-size: 16px; line-height: 1.6;
+  color: var(--ink); background: var(--surface);
+  border: 1px solid var(--control-border, var(--border)); border-radius: 8px;
+}
+#note-text::placeholder { color: var(--muted); }
+#note-help { margin: 8px 0 12px; }
+#review-dialog {
+  width: min(560px, calc(100% - 32px)); max-height: calc(100dvh - 48px);
+  padding: 24px; overflow-y: auto;
+  border: 1px solid var(--border); border-radius: 16px;
+  color: var(--ink); background: var(--surface);
+}
+#review-dialog::backdrop { background: rgb(8 12 20 / .72); }
+/* Keep the searched word and saved list from giving away the answer. */
+body:has(#review-dialog[open]) > :is(header, main, footer) { visibility: hidden; }
+#review-dialog p { font-size: 14px; }
+#review-question { margin: 24px 0; }
+#review-dialog #review-note { font-size: 20px; color: var(--ink); white-space: pre-wrap; overflow-wrap: anywhere; margin-top: 12px; }
+#review-answer { border-top: 1px solid var(--rule); padding-top: 20px; margin-top: 20px; }
+#review-dialog #review-term { font-size: 36px; line-height: 1.5; color: var(--ink); overflow-wrap: anywhere; }
+#review-done { margin: 24px 0; }
+#review-error:not(:empty) { margin-top: 12px; }
+:root[data-color-mode="dark"] .notebook-entry .notebook-word { border-color: transparent; background: transparent; }
+@media (max-width: 767px) {
+  #notebook-panel { padding: 16px; }
+  #notebook-list li { align-items: flex-start; flex-direction: column; gap: 8px; }
+  .notebook-row-actions { align-self: flex-end; }
+  #review-dialog { padding: 20px; }
+}
