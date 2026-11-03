@@ -538,7 +538,8 @@ canvas {
   min-height: 64px;
   max-height: 180px;
   overflow-y: auto;
-  padding-bottom: 8px;
+  /* Leave room for the candidate hover lift and rotation inside the scrollport. */
+  padding-block: 8px;
   scrollbar-width: thin;
 }
 
