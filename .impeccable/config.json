@@ -29,6 +29,15 @@
         ],
         "createdAt": "2026-11-02T18:41:16.212Z",
         "reason": "Existing user-selected ivory pastel study-notebook palette documented in docs/pastel-style.md and preserved during dark-mode work. This rule has no extractable color value, so the exception is scoped to index.html."
+      },
+      {
+        "rule": "border-accent-on-rounded",
+        "value": "*",
+        "files": [
+          "src/spike.css"
+        ],
+        "createdAt": "2026-11-03T16:08:44.633Z",
+        "reason": "Agent reviewed: existing mobile tab selected-state underline identifies the active tab; this is a navigation indicator rather than a card accent."
       }
     ]
   }
